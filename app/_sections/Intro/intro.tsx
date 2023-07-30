@@ -10,7 +10,7 @@ function Intro(){
             <div className="max-w-[90%] 750:max-w-[50%]">
                 <div className='flex justify-center items-center'>
                     <h1 className={classes.hi}>
-                        Hello, I'm Dhanavel R
+                        Hello, I&apos;m Dhanavel R
                     </h1>
                 </div>
                 <h2 className="mt-6 text-base 300:text-xl text-center">
