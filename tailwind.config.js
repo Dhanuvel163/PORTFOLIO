@@ -12,7 +12,30 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      keyframes:{
+        animate: {
+          '0%,10%,100%':{
+            width: '0%'
+          },
+          '70%,80%,90%':{
+            width: '100%'
+          }
+        }
+      },
+      animation:{
+        animate: 'animate 6s linear infinite'
+      }
     },
+    colors:{
+      primary: '#9004ef'
+    },
+    screens: {
+      '300': '300px',
+      '350': '350px',
+      '750': '750px',
+      '1250': '1250px',
+      '1000': '1000px',
+    }
   },
   plugins: [],
 }
