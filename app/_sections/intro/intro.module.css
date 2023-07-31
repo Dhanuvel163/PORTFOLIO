@@ -1,0 +1,8 @@
+.hi{
+    @apply relative font-bold text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-5xl 1250:text-6xl overflow-hidden break-words whitespace-nowrap;
+}
+
+.hi::before{
+    content: "Hello, I'm Dhanavel R";
+    @apply absolute border-r-2 text-primary border-primary overflow-hidden animate-animate break-words;
+}
