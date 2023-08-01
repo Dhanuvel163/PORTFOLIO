@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Work_Sans } from 'next/font/google'
+import Lenis from './@lenis/lenis'
 
 const work_sans = Work_Sans({ subsets: ['latin'] })
 
@@ -17,11 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${work_sans.className} break-words scroll-smooth selection:bg-primary selection:text-[white]`}>
-        {header}
-        {children}
-        {footer}
-      </body>
+      <Lenis>
+        <body className={`${work_sans.className} break-words selection:bg-primary selection:text-[white]`}>
+          {header}
+          {children}
+          {footer}
+        </body>
+      </Lenis>
     </html>
   )
 }
