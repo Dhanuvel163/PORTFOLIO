@@ -6,7 +6,7 @@ function Skillscard({
     title: string, skills: skill[]
 }){
     return(
-        <div className='rounded mt-4 border border-[#e5e7eb] shadow transform transition hover:scale-[1.05] hover:z-10 relative duration-300'>
+        <div className='rounded mt-4 border border-[#e5e7eb] shadow transform transition hover:scale-[1.05] hover:z-10 relative duration-300 bg-[white]'>
             <h3 className='font-bold text-xl text-[black] px-2 py-1 rounded border-b border-[#e5e7eb] border-solid'>{title}</h3>
             <div className="flex flex-wrap justify-center gap-2 p-2">
                 {
