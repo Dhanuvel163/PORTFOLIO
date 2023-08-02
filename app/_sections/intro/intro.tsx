@@ -8,7 +8,6 @@ import Link from 'next/link';
 import {TweenMax,Power3} from 'gsap';
 
 function Intro(){
-    let titleRef = useRef<HTMLHeadingElement | null>(null)
     let descriptionRef = useRef<HTMLHeadingElement | null>(null)
     let containerRef = useRef<HTMLDivElement | null>(null)
     let gitRef = useRef<HTMLAnchorElement | null>(null)
@@ -18,7 +17,6 @@ function Intro(){
     
     useEffect(()=>{
         TweenMax.to(containerRef.current,0,{css:{visibility:'visible'}})
-        // TweenMax.from(titleRef.current,0.8,{y:20,ease:Power3.easeOut,opacity:0})
         TweenMax.from(descriptionRef.current,0.8,{y:20,ease:Power3.easeOut,opacity:0,delay:0.2})
         TweenMax.staggerFrom([gitRef.current,linkedinRef.current,instaRef.current,mailRef.current],0.8,{opacity:0,ease:Power3.easeOut,y:20,stagger:0.2,delay:0.2})
     },[])
@@ -27,7 +25,7 @@ function Intro(){
         <section className="h-[calc(100vh-4.175rem)] flex justify-center items-center">
             <div className="max-w-[90%] 750:max-w-[50%]">
                 <div className='flex justify-center items-center'>
-                    <h1 className={classes.hi} ref={titleRef}>
+                    <h1 className={classes.hi}>
                         Hello, I&apos;m Dhanavel R
                     </h1>
                 </div>
