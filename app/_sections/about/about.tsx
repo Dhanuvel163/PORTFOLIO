@@ -60,10 +60,10 @@ function About(){
         }
     },[])
     return(
-        <section className="h-[calc(100vh-4.175rem)] flex justify-center items-center mt-10 mb-10 px-[5%] bg-[#1a151ef5]"
+        <section className="h-[calc(100vh-4.175rem)] flex justify-center items-center mt-10 px-[5%] bg-secondary"
             ref={sectionRef}>
             <div ref={containerRef} className='invisible'>
-                <h2 className="text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-5xl 1250:text-6xl font-bold  text-center text-[white]">Skills</h2>
+                <h2 className="text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold  text-center text-[white]">Skills</h2>
                 <div className='mt-6'>
                     <Skillscard title='Frontend' skills={frontend}/>
                     <Skillscard title='Backend' skills={backend}/>
