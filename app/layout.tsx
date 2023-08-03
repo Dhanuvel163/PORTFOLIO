@@ -18,13 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Lenis>
+      {/* <Lenis> */}
         <body className={`${work_sans.className} break-words selection:bg-primary selection:text-[white]`}>
           {header}
           {children}
           {footer}
         </body>
-      </Lenis>
+      {/* </Lenis> */}
     </html>
   )
 }
