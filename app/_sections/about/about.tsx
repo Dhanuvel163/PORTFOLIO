@@ -21,14 +21,14 @@ function About(){
                 gsap.from(
                     [child],
                     {
-                        x:'-250',
+                        x:'-50%',
                         opacity: 0,
                         scrollTrigger: {
                             trigger: child,
                             start: "top 95%",
                             end: "bottom 95%",
-                            scrub: true
                         },
+                        duration: 0.4,
                         ease: Power3.easeInOut,
                     }
                 )
