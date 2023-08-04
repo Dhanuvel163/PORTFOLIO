@@ -2,72 +2,59 @@
 import { useEffect, useRef } from 'react';
 import Skillscard from '@/components/skillscard/Skillscard';
 import {frontend,backend,tools} from './data';
-import {gsap,Power3} from 'gsap';
+import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
+import {RiLightbulbFlashFill} from 'react-icons/ri';
+import {SiFastapi} from 'react-icons/si';
+import {CiGrid31} from 'react-icons/ci';
+import Iconcard from '@/components/iconcard/iconcard';
+import { animateAbout } from './animate';
 
 function About(){
     const containerRef = useRef<HTMLDivElement>(null);
-    const sectionRef = useRef<HTMLDivElement>(null);
+    const skillsRef = useRef<HTMLDivElement>(null);
+    const iconsRef = useRef<HTMLDivElement>(null);
+    
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger)
         const tweens : gsap.core.Tween[] = [];
-
-        tweens.push(
-            gsap.to(containerRef.current,{css:{visibility:'visible'},duration:0})        
-        )
-
-        //Title animation
-        tweens.push(
-            gsap.from(
-                [containerRef.current?.children[0]],
-                {
-                    x:'-100',
-                    opacity: 0,
-                    scrollTrigger: {
-                        trigger: containerRef.current,
-                        start: "top 95%",
-                        end: "bottom 95%",
-                    },
-                    duration: 0.8,
-                    ease: Power3.easeOut,
-                }
-            )
-        )
-
-        //Skill card animation
-        const children:number = containerRef.current?.children[1].children.length || 0;
-        for (let i = 0; i < children; i++) {
-            const child = containerRef.current?.children[1].children[i];
-            tweens.push(
-                gsap.from(
-                    [child],
-                    {
-                        x:'-300px',
-                        opacity: 0,
-                        scrollTrigger: {
-                            trigger: child,
-                            start: "top 98%",
-                            end: "bottom 98%",
-                        },
-                        duration: 0.8,
-                        ease: Power3.easeOut,
-                    }
-                )
-            )
-        }
+        animateAbout(gsap,tweens,containerRef,skillsRef,iconsRef)
         return () => {
             tweens.forEach((tween)=>tween.kill())
         }
     },[])
     return(
-        <section className="h-[calc(100vh-4.175rem)] flex justify-center items-center mt-10 px-[5%] bg-secondary"
-            ref={sectionRef}>
+        <section className="min-h-[100vh] py-10 flex justify-center items-center px-[5%] bg-secondary border-t border-[#eaeaea] border-solid">
             <div ref={containerRef} className='invisible'>
-                <h2 className="text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold  text-center text-[white]">Skills</h2>
-                <div className='mt-6'>
-                    <Skillscard title='Frontend' skills={frontend}/>
-                    <Skillscard title='Backend' skills={backend}/>
-                    <Skillscard title='Tools' skills={tools}/>
+                <h2 className="text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold  text-center text-[black]">Skills</h2>
+                
+                <div className='block mt-6 600:flex'>
+                    <div className='flex items-center'>
+                        <div ref={skillsRef}>
+                            <Skillscard title='Frontend' skills={frontend}/>
+                            <Skillscard title='Backend' skills={backend}/>
+                            <Skillscard title='Tools' skills={tools}/>
+                        </div>
+                    </div>
+                    <div className='w-[1px] mx-[5vw] bg-[black]/[0.05]'>
+                    </div>
+                    <div className='flex flex-col max-w-[15.25rem] text-center m-auto mt-10 600:m-0' ref={iconsRef}>
+                        <Iconcard 
+                            title='Intuitive' 
+                            description='Effortlessly navigable, instinctively user-friendly UX/UI.' 
+                            icon={<RiLightbulbFlashFill className="text-[2.75rem]"/>}
+                        />
+                        <Iconcard 
+                            title='Scale' 
+                            description='Easily scalable and high performant products.' 
+                            icon={<SiFastapi className="text-[2rem]"/>}
+                        />
+                        <Iconcard 
+                            title='Adaptable' 
+                            description='Adapt to any screen size/device, from the grandest to the tiniest.' 
+                            icon={<CiGrid31 className="text-[2rem]"/>}
+                        />
+                    </div>
                 </div>
             </div>
         </section>

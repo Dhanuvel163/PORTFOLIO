@@ -6,9 +6,9 @@ function Skillscard({
     title: string, skills: skill[]
 }){
     return(
-        <div className='rounded mt-4 border border-[#e5e7eb] shadow relative bg-[white] hover:z-10'>
-            <h3 className='font-bold text-xl text-[black] px-2 py-1 rounded border-b border-[#e5e7eb] border-solid'>{title}</h3>
-            <div className="flex flex-wrap justify-center gap-2 p-2">
+        <div className='bg-[white] rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] mt-3 shadow-sm relative hover:z-10'>
+            <h3 className='font-bold text-xl text-[black] px-2 py-2 rounded border-b border-[#e5e7eb] border-solid'>{title}</h3>
+            <div className="flex flex-wrap justify-center gap-2 p-2 py-4">
                 {
                     skills.map((skill)=>(
                         <div className={`text-4xl ${skill.class} group relative flex flex-col items-center`} key={skill.title}>
