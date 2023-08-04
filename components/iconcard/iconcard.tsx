@@ -9,12 +9,12 @@ function Iconcard({
             <div className="flex justify-center">
                 {icon}
             </div>
-            <div className='text-base font-bold'>
+            <h4 className='text-base font-bold'>
                 {title}
-            </div>
-            <div className='text-xs'>
+            </h4>
+            <p className='text-xs'>
                 {description}
-            </div>
+            </p>
         </div>
     );
 }
