@@ -32,7 +32,7 @@ function Projects(){
                                         <div className="relative w-full 750:w-80 h-[16rem] 750:h-full 750:min-h-[20rem] bg-primary ring-1 ring-[rgb(51,65,85)]/[0.1]">
                                             <Image src={project.image} layout='fill' objectFit='cover' alt="project image"/>
                                         </div>
-                                        <div className="px-10 py-5 750:flex-[0%] grid">
+                                        <div className="px-5 500:px-10 py-5 750:flex-[0%] grid">
                                             <div>
                                                 <h3 className="text-xl 500:text-3xl font-bold">{project.title}</h3>
                                                 <p className="text-xs 500:text-sm mt-3">
