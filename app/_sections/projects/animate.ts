@@ -2,9 +2,8 @@ import { animateChildren } from "@/utils/tweens"
 import { RefObject } from "react"
 import { Power3 } from "gsap"
 
-export function animateAbout(
-    gsap:GSAP,tweens:gsap.core.Tween[],containerRef:RefObject<HTMLDivElement>,
-    skillsRef:RefObject<HTMLDivElement>,iconsRef:RefObject<HTMLDivElement>
+export function animateProjects(
+    gsap:GSAP,tweens:gsap.core.Tween[],containerRef:RefObject<HTMLDivElement>
 ){
     tweens.push(
         gsap.to(containerRef.current,{css:{visibility:'visible'},duration:0})        
@@ -29,25 +28,9 @@ export function animateAbout(
 
     //Skill card animation
     animateChildren(
-        skillsRef.current, tweens,
+        containerRef.current?.children[1], tweens,
         {
             x:'-300px',
-            opacity: 0,
-            scrollTrigger: {
-                start: "top 98%",
-                end: "bottom 98%",
-            },
-            duration: 0.8,
-            ease: Power3.easeOut,
-        },
-        true
-    )
-    
-    //Icon card animation
-    animateChildren(
-        iconsRef.current, tweens,
-        {
-            x:'300px',
             opacity: 0,
             scrollTrigger: {
                 start: "top 98%",

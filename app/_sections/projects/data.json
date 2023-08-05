@@ -1,0 +1,29 @@
+[
+    {
+        "title" : "Riskcovry",
+        "description": "Enterprise product following a B2B2C model, which provides customers with a SaaS & API-first platform. This empowers them to offer a comprehensive range of insurance services to end-consumers without compromising their brand experience. Through our platform, customers can effortlessly handle all aspects of insurance, including purchasing, management, and claims processing.",
+        "skills": ["Node JS", "Ruby on Rails", "Microservices "],
+        "actions" : [{
+            "action":"View", "link":"https://riskcovry.com/", "label": "View Riskcovry"
+        }],
+        "image": "/images/projects/riskcovry.png"
+    },
+    {
+        "title" : "Extramileplay",
+        "description": "A website specifically designed for organizations to efficiently manage their subscribed games. With this platform, organizations can easily handle user management and grant users access to play games based on their subscriptions. It provides a seamless and user-friendly experience for both the organization and its users.",
+        "skills": ["Node JS", "PostgreSQL"],
+        "actions" : [{
+            "action":"View", "link":"https://extramileplay.com/", "label": "View Extramileplay"
+        }],
+        "image": "/images/projects/extramile.png"
+    },
+    {
+        "title" : "Kalanju",
+        "description": "Employee Management site that serves as a comprehensive solution for handling various aspects of employee data, assets, projects, leads, invoices, leaves, and other organizational matters. This all-in-one site streamlines the management process and provides an efficient platform for addressing various organizational needs.",
+        "skills": ["React.js", "Node.js", "MySQL", "Microservices "],
+        "actions" : [{
+            "action":"View", "link":"https://kalanju.com/", "label": "View Kalanju"
+        }],
+        "image": "/images/projects/kalanju.png"
+    }
+]

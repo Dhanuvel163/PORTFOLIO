@@ -24,7 +24,7 @@ function About(){
         }
     },[])
     return(
-        <section className="min-h-[100vh] py-10 flex justify-center items-center px-[5%] bg-secondary border-t border-[#eaeaea] border-solid max-w-[100vw] overflow-hidden">
+        <section className="min-h-[100vh] py-20 flex justify-center items-center px-[5%] bg-secondary border-t border-[#eaeaea] border-solid max-w-[100vw] overflow-hidden">
             <div ref={containerRef} className='invisible'>
                 <h2 className="text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold  text-center text-[black]">Skills</h2>
                 
