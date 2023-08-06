@@ -31,6 +31,8 @@ module.exports = {
       secondary: '#f9f9f9',
     },
     screens: {
+      '200': '200px',
+      '280': '280px',
       '300': '300px',
       '350': '350px',
       '500': '500px',

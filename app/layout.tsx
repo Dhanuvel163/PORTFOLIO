@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode, header: React.ReactNode, footer: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className='scroll-smooth'>
       {/* <Lenis> */}
         <body className={`${work_sans.className} break-words selection:bg-primary selection:text-[white]`}>
           {header}

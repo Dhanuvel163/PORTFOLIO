@@ -22,7 +22,7 @@ function Intro(){
     },[])
 
     return(
-        <section className="h-[calc(100vh-4.175rem)] flex justify-center items-center">
+        <section className="h-[100vh] flex justify-center items-center" id='intro'>
             <div className="max-w-[90%] 750:max-w-[50%]">
                 <div className='flex justify-center items-center'>
                     <h1 className={classes.hi}>
