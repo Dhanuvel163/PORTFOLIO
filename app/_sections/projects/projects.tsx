@@ -20,15 +20,15 @@ function Projects(){
         }
     },[])
     return(
-        <section className="min-h-[100vh] py-20 flex justify-center items-center px-[5%] bg-[white] border-t border-[#eaeaea] border-solid" id="projects">
+        <section className="min-h-[100vh] py-20 flex justify-center items-center px-[5%] bg-[white] border-t border-[#eaeaea] border-solid dark:bg-darkprimary" id="projects">
             <div ref={containerRef}>
-                <h2 className="text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold  text-center text-[black]">Projects</h2>
+                <h2 className="text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold  text-center text-[black] dark:text-[white]">Projects</h2>
 
                 <div className="mt-6">
                         {
                             projectsData.map((project)=>(
                                 <div className="flex justify-center" key={project.title}>
-                                    <div className="block 750:flex bg-[white] rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] mt-3 shadow-sm relative hover:z-10 overflow-hidden max-w-none 1100:max-w-[80%]">
+                                    <div className="block 750:flex bg-[white] rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] mt-3 shadow-sm relative hover:z-10 overflow-hidden max-w-none 1100:max-w-[80%] dark:bg-darksecondary dark:text-[white] dark:ring-[rgb(255,255,255)]/[0.3]">
                                         <div className="relative w-full 750:w-80 h-[16rem] 750:h-full 750:min-h-[20rem] bg-primary ring-1 ring-[rgb(51,65,85)]/[0.1]">
                                             <Image src={project.image} layout='fill' objectFit='cover' alt="project image"/>
                                         </div>

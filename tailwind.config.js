@@ -29,11 +29,14 @@ module.exports = {
     colors:{
       primary: '#9004ef',
       secondary: '#f9f9f9',
+      darkprimary: '#000000',
+      darksecondary: '#1A1A1E',
     },
     screens: {
       '200': '200px',
       '280': '280px',
       '300': '300px',
+      '330': '330px',
       '350': '350px',
       '500': '500px',
       '600': '600px',

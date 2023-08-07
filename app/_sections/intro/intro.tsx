@@ -22,7 +22,7 @@ function Intro(){
     },[])
 
     return(
-        <section className="h-[100vh] flex justify-center items-center dark:bg-[black]" id='intro'>
+        <section className="h-[100vh] flex justify-center items-center dark:bg-darkprimary" id='intro'>
             <div className="max-w-[90%] 750:max-w-[50%]">
                 <div className='flex justify-center items-center'>
                     <h1 className={`${classes.hi} dark:text-[white]`}>
