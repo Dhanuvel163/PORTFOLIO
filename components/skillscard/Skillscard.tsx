@@ -6,7 +6,7 @@ function Skillscard({
     title: string, skills: skill[]
 }){
     return(
-        <div className='bg-[white] dark:bg-darkprimary dark:text-[white] rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] mt-3 shadow-sm relative hover:z-10 dark:ring-[rgb(255,255,255)]/[0.3]'>
+        <div className='bg-[white] dark:bg-darksecondary dark:text-[white] rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] mt-3 shadow-sm relative hover:z-10 dark:ring-[rgb(255,255,255)]/[0.3]'>
             <h3 className='font-bold text-xl text-[black] px-2 py-2 rounded border-b border-[#e5e7eb] dark:border-[rgb(255,255,255)]/[0.3] border-solid dark:text-[white]'>{title}</h3>
             <div className="flex flex-wrap justify-center gap-2 p-2 py-4">
                 {

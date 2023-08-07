@@ -5,7 +5,7 @@ function Iconcard({
 
 }){
     return(
-        <div className="bg-[white] dark:bg-darkprimary dark:text-[white] dark:ring-[rgb(255,255,255)]/[0.3] rounded-xl p-4 mt-3 shadow-sm ring-1 ring-[rgb(51,65,85)]/[0.1]">
+        <div className="bg-[white] dark:bg-darksecondary dark:text-[white] dark:ring-[rgb(255,255,255)]/[0.3] rounded-xl p-4 mt-3 shadow-sm ring-1 ring-[rgb(51,65,85)]/[0.1]">
             <div className="flex justify-center">
                 {icon}
             </div>
