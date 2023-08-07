@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Work_Sans } from 'next/font/google'
 import Lenis from './@lenis/lenis'
+import DarkMode from './@darkmode/darkmode'
 
 const work_sans = Work_Sans({ subsets: ['latin'] })
 
@@ -17,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode, header: React.ReactNode, footer: React.ReactNode
 }) {
   return (
-    <html lang="en" className='scroll-smooth'>
+    <DarkMode>
       {/* <Lenis> */}
         <body className={`${work_sans.className} break-words selection:bg-primary selection:text-[white]`}>
           {header}
@@ -25,6 +26,6 @@ export default function RootLayout({
           {footer}
         </body>
       {/* </Lenis> */}
-    </html>
+    </DarkMode>
   )
 }

@@ -22,18 +22,18 @@ function Intro(){
     },[])
 
     return(
-        <section className="h-[100vh] flex justify-center items-center" id='intro'>
+        <section className="h-[100vh] flex justify-center items-center dark:bg-[black]" id='intro'>
             <div className="max-w-[90%] 750:max-w-[50%]">
                 <div className='flex justify-center items-center'>
-                    <h1 className={classes.hi}>
+                    <h1 className={`${classes.hi} dark:text-[white]`}>
                         Hello, I&apos;m Dhanavel R
                     </h1>
                 </div>
                 <div ref={containerRef} className='invisible'>
-                    <h2 className="mt-6 text-base 300:text-xl text-center">
+                    <h2 className="mt-6 text-base 300:text-xl text-center dark:text-[white]">
                         A <span className="text-primary">Full Stack Developer</span> who is passionate, creative, and driven to produce outstanding digital experiences. Connect with me to create seamless, user-friendly, and cutting-edge apps.
                     </h2>
-                    <div className='flex flex-wrap justify-center items-center mt-6 text-2xl gap-2 350:gap-3'>
+                    <div className='flex flex-wrap justify-center items-center mt-6 text-2xl gap-2 350:gap-3 dark:text-[white]'>
                         <Link href="https://github.com/Dhanuvel163" target='_blank' aria-label='View github profile'>
                             <Button icon={<AiFillGithub/>} label='View github profile'/>
                         </Link>
