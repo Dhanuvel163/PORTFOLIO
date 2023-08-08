@@ -16,17 +16,17 @@ function Header(){
                 </div>
             </div>
             <div className='hidden 200:flex dark:text-[white]'>
-                <ScrollLink className='cursor-pointer items-center text-xs 280:text-base hidden 330:flex' activeClass="text-primary border-b border-primary border-solid font-bold" to="intro" spy={true} smooth={true} offset={0} duration={100}>
+                <ScrollLink className='cursor-pointer items-center text-xs 280:text-base hidden 330:flex' activeClass="text-primary border-b border-primary border-solid font-bold" to="intro" spy={true} smooth={true} offset={0} duration={100} href='#'>
                     <div>
                         Home
                     </div>
                 </ScrollLink>
-                <ScrollLink className='ml-2 280:ml-4 cursor-pointer items-center text-xs 280:text-base hidden 330:flex' activeClass="text-primary border-b border-primary border-solid font-bold" to="skills" spy={true} smooth={true} offset={0} duration={100}>
+                <ScrollLink className='ml-2 280:ml-4 cursor-pointer items-center text-xs 280:text-base hidden 330:flex' activeClass="text-primary border-b border-primary border-solid font-bold" to="skills" spy={true} smooth={true} offset={0} duration={100} href='#'>
                     <div>
                         Skills
                     </div>
                 </ScrollLink>
-                <ScrollLink className='ml-2 280:ml-4 cursor-pointer items-center text-xs 280:text-base hidden 330:flex' activeClass="text-primary border-b border-primary border-solid font-bold" to="projects" spy={true} smooth={true} offset={0} duration={100}>
+                <ScrollLink className='ml-2 280:ml-4 cursor-pointer items-center text-xs 280:text-base hidden 330:flex' activeClass="text-primary border-b border-primary border-solid font-bold" to="projects" spy={true} smooth={true} offset={0} duration={100} href='#'>
                     <div>
                         Projects
                     </div>
