@@ -33,6 +33,7 @@ function Projects(){
             <ParticleBackground 
                 particleCount={20} 
                 colors={['#9004ef', '#ffffff60', '#f9f9f960']}
+                scrollMultiplier={0.4}
             />
             
             <div ref={containerRef}>

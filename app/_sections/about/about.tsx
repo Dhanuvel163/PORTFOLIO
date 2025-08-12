@@ -38,6 +38,7 @@ function About(){
             <ParticleBackground 
                 particleCount={25} 
                 colors={['#9004ef', '#f9f9f940', '#00000020']}
+                scrollMultiplier={0.6}
             />
             
             <div ref={containerRef} className='invisible'>

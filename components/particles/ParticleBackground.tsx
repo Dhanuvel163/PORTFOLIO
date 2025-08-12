@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 
 interface Particle {
   x: number;
@@ -9,20 +9,25 @@ interface Particle {
   size: number;
   opacity: number;
   color: string;
+  baseX: number;
+  baseY: number;
 }
 
 function ParticleBackground({ 
   particleCount = 50, 
   colors = ['#9004ef', '#ffffff', '#f0f0f0'],
-  className = ""
+  className = "",
+  scrollMultiplier = 0.5
 }: {
   particleCount?: number;
   colors?: string[];
   className?: string;
+  scrollMultiplier?: number;
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number>();
+  const scrollY = useRef<number>(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -39,29 +44,55 @@ function ParticleBackground({
     const createParticles = () => {
       particlesRef.current = [];
       for (let i = 0; i < particleCount; i++) {
+        const baseX = Math.random() * canvas.width;
+        const baseY = Math.random() * canvas.height;
         particlesRef.current.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
+          x: baseX,
+          y: baseY,
           vx: (Math.random() - 0.5) * 0.5,
           vy: (Math.random() - 0.5) * 0.5,
           size: Math.random() * 2 + 1,
           opacity: Math.random() * 0.5 + 0.2,
-          color: colors[Math.floor(Math.random() * colors.length)]
+          color: colors[Math.floor(Math.random() * colors.length)],
+          baseX: baseX,
+          baseY: baseY
         });
       }
     };
+
+    const handleScroll = useCallback(() => {
+      scrollY.current = window.scrollY;
+    }, []);
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       particlesRef.current.forEach((particle, index) => {
+        // Apply scroll-based movement
+        const scrollOffset = scrollY.current * scrollMultiplier;
+        const scrollInfluence = Math.sin(particle.baseX * 0.01) * scrollOffset * 0.1;
+        
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
+        
+        // Add scroll-based drift
+        particle.x += scrollInfluence * 0.02;
+        particle.y -= scrollOffset * 0.05 * (particle.size / 3);
 
         // Bounce off edges
         if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
         if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+        
+        // Reset particles that drift too far from scroll
+        if (particle.y < -50) {
+          particle.y = canvas.height + 50;
+          particle.x = particle.baseX;
+        }
+        if (particle.y > canvas.height + 50) {
+          particle.y = -50;
+          particle.x = particle.baseX;
+        }
 
         // Draw particle
         ctx.beginPath();
@@ -76,12 +107,13 @@ function ParticleBackground({
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) {
+          const maxDistance = 120 + Math.sin(scrollY.current * 0.001) * 20;
+          if (distance < maxDistance) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.strokeStyle = particle.color;
-            ctx.globalAlpha = (100 - distance) / 100 * 0.2;
+            ctx.globalAlpha = (maxDistance - distance) / maxDistance * 0.3;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -94,6 +126,8 @@ function ParticleBackground({
     resizeCanvas();
     createParticles();
     animate();
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     window.addEventListener('resize', () => {
       resizeCanvas();
@@ -104,9 +138,10 @@ function ParticleBackground({
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
+      window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', resizeCanvas);
     };
-  }, [particleCount, colors]);
+  }, [particleCount, colors, scrollMultiplier]);
 
   return (
     <canvas

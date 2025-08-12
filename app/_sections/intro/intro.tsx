@@ -32,6 +32,7 @@ function Intro(){
             <ParticleBackground 
                 particleCount={30} 
                 colors={['#9004ef', '#ffffff40', '#f0f0f040']}
+                scrollMultiplier={0.3}
             />
             
             {/* Geometric shapes */}
