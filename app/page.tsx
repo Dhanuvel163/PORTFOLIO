@@ -9,15 +9,15 @@ export default function Home() {
   return (
     <main className="relative">
       {/* Grid background */}
-      <AnimatedGrid />
+      {/* <AnimatedGrid /> */}
       {/* Particle system */}
-      <ParticleBackground 
+      {/* <ParticleBackground 
           particleCount={25} 
           colors={['#9004ef', '#f9f9f940', '#00000020']}
           scrollMultiplier={0.6}
-      />
+      /> */}
       {/* Geometric shapes */}
-      <GeometricShapes />
+      {/* <GeometricShapes /> */}
       <Intro/>
       <About/>
       <Projects/>

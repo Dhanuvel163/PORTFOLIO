@@ -6,6 +6,8 @@ import {AiFillGithub,AiFillLinkedin,AiFillInstagram} from 'react-icons/ai';
 import {BiMailSend} from 'react-icons/bi';
 import Link from 'next/link';
 import {Power3,gsap} from 'gsap';
+import ParticleBackground from '@/components/particles/ParticleBackground';
+import GeometricShapes from '@/components/geometric/GeometricShapes';
 
 function Intro(){
     let containerRef = useRef<HTMLDivElement | null>(null)
@@ -25,6 +27,13 @@ function Intro(){
         <section className="relative h-[100vh] flex justify-center items-center overflow-hidden" id='intro'>
             {/* Animated background */}
             <div className="absolute inset-0 bg-gradient-to-br from-secondary via-white to-primary/5 dark:from-darkprimary dark:via-darkprimary dark:to-primary/10"></div>
+            {/* Particle system */}
+            <ParticleBackground
+                particleCount={30} 
+                colors={['#9004ef', '#ffffff40', '#f0f0f040']}
+                scrollMultiplier={0.3}/>
+            {/* Geometric shapes */}
+            <GeometricShapes />
             {/* Main content */}
             <div className="max-w-[90%] 750:max-w-[50%]">
                 <div className='flex justify-center items-center'>

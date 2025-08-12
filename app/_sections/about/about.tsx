@@ -10,6 +10,8 @@ import Iconcard from '@/components/iconcard/iconcard';
 import { animateAbout } from './animate';
 import { BiSolidMobileVibration } from "react-icons/bi";
 import { GrTechnology } from "react-icons/gr";
+import AnimatedGrid from '@/components/grid/AnimatedGrid';
+import ParticleBackground from '@/components/particles/ParticleBackground';
 
 function About(){
     const containerRef = useRef<HTMLDivElement>(null);
@@ -28,6 +30,13 @@ function About(){
         <section className="relative min-h-[100vh] py-20 flex justify-center items-center px-[5%] border-t border-[#eaeaea] border-solid max-w-[100vw] overflow-hidden dark:border-[#E5E7EB6E]" id='skills'>
             {/* Animated background */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary to-white dark:from-primary/10 dark:via-darkprimary dark:to-darksecondary"></div>
+            {/* Grid background */}
+            <AnimatedGrid />
+            {/* Particle system */}
+            <ParticleBackground 
+                particleCount={25} 
+                colors={['#9004ef', '#f9f9f940', '#00000020']}
+                scrollMultiplier={0.6}/>
             <div ref={containerRef} className='invisible'>
                 <h2 className="relative z-10 text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold text-center text-[black] dark:text-[white]">Skills</h2>
                 

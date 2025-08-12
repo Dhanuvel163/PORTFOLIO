@@ -8,6 +8,8 @@ import {useRef,useEffect} from 'react';
 import {gsap} from "gsap";
 import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
 import { animateProjects } from "./animate";
+import GeometricShapes from "@/components/geometric/GeometricShapes";
+import ParticleBackground from "@/components/particles/ParticleBackground";
 
 function Projects(){
     const containerRef = useRef<HTMLDivElement>(null);
@@ -23,6 +25,13 @@ function Projects(){
         <section className="relative min-h-[100vh] py-20 flex justify-center items-center px-[5%] border-t border-[#eaeaea] border-solid dark:border-[#E5E7EB6E] overflow-hidden" id="projects">
             {/* Animated background */}
             <div className="absolute inset-0 bg-gradient-to-tr from-white via-primary/5 to-secondary dark:from-darksecondary dark:via-primary/10 dark:to-darkprimary"></div>
+            {/* Geometric shapes */}
+            <GeometricShapes />
+            {/* Particle system */}
+            <ParticleBackground 
+                particleCount={20} 
+                colors={['#9004ef', '#ffffff60', '#f9f9f960']}
+                scrollMultiplier={0.4}/>
             <div ref={containerRef}>
                 <h2 className="relative z-10 text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold text-center text-[black] dark:text-[white]">Projects</h2>
                 <div className="relative z-10 mt-6">
