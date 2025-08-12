@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <DarkMode>
       {/* <Lenis> */}
-        <body className={`${work_sans.className} break-words selection:bg-primary selection:text-[white]`}>
+        <body className={`${work_sans.className} break-words selection:bg-primary selection:text-[white] dark:bg-darkprimary`}>
           {header}
           {children}
           {footer}

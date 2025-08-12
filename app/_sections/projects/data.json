@@ -2,20 +2,57 @@
     {
         "title" : "Riskcovry",
         "description": "Enterprise product following a B2B2C model, which provides customers with a SaaS & API-first platform. This empowers them to offer a comprehensive range of insurance services to end-consumers without compromising their brand experience. Through our platform, customers can effortlessly handle all aspects of insurance, including purchasing, management, and claims processing.",
-        "skills": ["Node JS", "Ruby on Rails", "Microservices"],
+        "skills": ["Node JS", "Ruby on Rails", "Microservices", "Python", "React"],
         "actions" : [{
             "action":"View", "link":"https://riskcovry.com/", "label": "View Riskcovry"
         }],
-        "image": "/images/projects/riskcovry.png"
+        "image": "/images/projects/riskcovry_final.png",
+        "height": 1358,
+        "weight": 2283
+    },
+    {
+        "title" : "Chad Trader",
+        "description": "Crafted a high-conversion landing page for “Chad Trader,” featuring mentorship-driven trading programs and compelling calls-to-action to drive user sign-ups.",
+        "skills": ["NextJs"],
+        "actions" : [{
+            "action":"View", "link":"https://chad-trader.vercel.app/", "label": "View 6Enigma"
+        }],
+        "image": "/images/projects/chadtrader.png",
+        "height": 1360,
+        "weight": 2284
+    },
+    {
+        "title" : "6Enigma",
+        "description": "Comprehensive data analytics portal facilitating both client and admin access, enabling real-time monitoring of video editing workflows, performance metrics, and user engagement insights.",
+        "skills": ["React", "Flask", "MongoDB"],
+        "actions" : [{
+            "action":"View", "link":"https://client.6enigma.in/", "label": "View 6Enigma"
+        }],
+        "image": "/images/projects/6enigma.png",
+        "height": 1358,
+        "weight": 2282
+    },
+    {
+        "title" : "TraceLyfe",
+        "description": "Tracelyfe is a compact, ABDM-certified micro-Hospital Management Information System (HMIS) featuring integrated patient engagement and vitals-tracing capabilities that streamline health record management. Designed to simplify healthcare workflows, Tracelyfe enables seamless data handling by leveraging the Ayushman Bharat Digital Mission (ABDM) integration for efficient operations and enhanced patient care.",
+        "skills": ["React"],
+        "actions" : [{
+            "action":"View", "link":"https://www.tracelyfe.com/", "label": "View TraceLyfe"
+        }],
+        "image": "/images/projects/tracelyfe.png",
+        "height": 1360,
+        "weight": 2284
     },
     {
         "title" : "Extramileplay",
         "description": "A website specifically designed for organizations to efficiently manage their subscribed games. With this platform, organizations can easily handle user management and grant users access to play games based on their subscriptions. It provides a seamless and user-friendly experience for both the organization and its users.",
-        "skills": ["Node JS", "PostgreSQL"],
+        "skills": ["Node JS", "PostgreSQL", "Angular"],
         "actions" : [{
             "action":"View", "link":"https://extramileplay.com/", "label": "View Extramileplay"
         }],
-        "image": "/images/projects/extramile.png"
+        "image": "/images/projects/extramileplay.png",
+        "height": 1366,
+        "weight": 2290
     },
     {
         "title" : "Kalanju",
@@ -24,7 +61,9 @@
         "actions" : [{
             "action":"View", "link":"https://kalanju.com/", "label": "View Kalanju"
         }],
-        "image": "/images/projects/kalanju.png"
+        "image": "/images/projects/kalanju.png",
+        "height": 885,
+        "weight": 1893
     },
     {
         "title" : "Owlprints",
@@ -33,6 +72,8 @@
         "actions" : [{
             "action":"View", "link":"https://owlprints.in/", "label": "View Owlprints"
         }],
-        "image": "/images/projects/owlprints.png"
+        "image": "/images/projects/owlprints.png",
+        "height": 798,
+        "weight": 1592
     }
 ]

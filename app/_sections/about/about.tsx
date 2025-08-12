@@ -1,14 +1,15 @@
 "use client"
 import { useEffect, useRef } from 'react';
 import Skillscard from '@/components/skillscard/Skillscard';
-import {frontend,backend,tools} from './data';
+import {frontend,backend,tools,ai,database} from './data';
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
 import {RiLightbulbFlashFill} from 'react-icons/ri';
 import {SiFastapi} from 'react-icons/si';
-import {CiGrid31} from 'react-icons/ci';
 import Iconcard from '@/components/iconcard/iconcard';
 import { animateAbout } from './animate';
+import { BiSolidMobileVibration } from "react-icons/bi";
+import { GrTechnology } from "react-icons/gr";
 
 function About(){
     const containerRef = useRef<HTMLDivElement>(null);
@@ -33,6 +34,8 @@ function About(){
                         <div ref={skillsRef}>
                             <Skillscard title='Frontend' skills={frontend}/>
                             <Skillscard title='Backend' skills={backend}/>
+                            <Skillscard title='Database' skills={database}/>
+                            <Skillscard title='AI' skills={ai}/>
                             <Skillscard title='Tools' skills={tools}/>
                         </div>
                     </div>
@@ -52,7 +55,12 @@ function About(){
                         <Iconcard 
                             title='Adaptable' 
                             description='Adapt to any screen size/device, from the grandest to the tiniest.' 
-                            icon={<CiGrid31 className="text-[2rem]"/>}
+                            icon={<BiSolidMobileVibration className="text-[2rem]"/>}
+                        />
+                        <Iconcard 
+                            title='Futuristic'
+                            description='Designing with tomorrow’s technology in mind, ready to evolve with innovation.' 
+                            icon={<GrTechnology className="text-[2rem]"/>}
                         />
                     </div>
                 </div>

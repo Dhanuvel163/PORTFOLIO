@@ -2,13 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* SCROLLBAR */
 /* width */
 ::-webkit-scrollbar {
-    @apply w-[6px];
+    @apply w-[8px];
 }
 /* Track */
 ::-webkit-scrollbar-track {
-    @apply border border-solid border-[#e5e7eb];
+    /* @apply border border-solid border-[#e5e7eb]; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -16,5 +19,24 @@
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
+    @apply bg-[#555]
+}
+
+
+/* DARK SCROLLBAR */
+.dark ::-webkit-scrollbar {
+    @apply w-[8px];
+}
+/* Track */
+.dark ::-webkit-scrollbar-track {
+    /* @apply rounded-lg border-none; */
+    box-shadow: rgba(167, 167, 176, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+/* Handle */
+.dark ::-webkit-scrollbar-thumb {
+    @apply bg-[#323131] rounded-lg border border-solid border-[#000]/[0.10];
+}
+/* Handle on hover */
+.dark ::-webkit-scrollbar-thumb:hover {
     @apply bg-[#555]
 }

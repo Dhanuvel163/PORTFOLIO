@@ -1,14 +1,17 @@
 import {LiaReact} from 'react-icons/lia';
-import {AiFillHtml5} from 'react-icons/ai';
-import {BiLogoJavascript,BiLogoCss3,BiLogoNodejs,BiLogoAngular,BiLogoVuejs,BiLogoTypescript,BiLogoMongodb,BiLogoPostgresql,BiLogoFirebase,BiLogoAws} from 'react-icons/bi';
-import {SiNextdotjs,SiMysql,SiRubyonrails} from 'react-icons/si';
+import {
+    BiLogoJavascript,BiLogoNodejs,BiLogoAngular,BiLogoVuejs,BiLogoTypescript,
+    BiLogoMongodb, BiLogoPostgresql,BiLogoFirebase,BiLogoAws
+} from 'react-icons/bi';
+import {SiNextdotjs,SiMysql,SiRubyonrails,SiLangchain,SiGooglegemini} from 'react-icons/si';
+import { DiPython, DiDocker, DiGoogleCloudPlatform } from "react-icons/di";
 
 export const frontend = [
-    {
-        title: 'Html',
-        icon: AiFillHtml5,
-        class: 'text-[#e54c21]'
-    },
+    // {
+    //     title: 'Html',
+    //     icon: AiFillHtml5,
+    //     class: 'text-[#e54c21]'
+    // },
     {
         title: 'Javascript',
         icon: BiLogoJavascript,
@@ -19,11 +22,11 @@ export const frontend = [
         icon: BiLogoTypescript,
         class: 'text-[#2f74c0]'
     },
-    {
-        title: 'Css',
-        icon: BiLogoCss3,
-        class: 'text-[#167dbe]'
-    },
+    // {
+    //     title: 'Css',
+    //     icon: BiLogoCss3,
+    //     class: 'text-[#167dbe]'
+    // },
     {
         title: 'React Js',
         icon: LiaReact,
@@ -58,6 +61,14 @@ export const backend = [
         class: 'text-[#d30001]'
     },
     {
+        title: 'Python',
+        icon: DiPython,
+        class: 'text-[#366d9c]'
+    }
+]
+
+export const database = [
+    {
         title: 'MongoDB',
         icon: BiLogoMongodb,
         class: 'text-[#479d41]'
@@ -76,13 +87,36 @@ export const backend = [
 
 export const tools = [
     {
+        title: 'Aws',
+        icon: BiLogoAws,
+        class: 'text-[#ff9900]'
+    },
+    {
         title: 'Firebase',
         icon: BiLogoFirebase,
         class: 'text-[#ffcb2b]'
     },
     {
-        title: 'Aws',
-        icon: BiLogoAws,
-        class: 'text-[#ff9900]'
+        title: 'Docker',
+        icon: DiDocker,
+        class: 'text-[#0255d6]'
+    },
+    {
+        title: 'GCP',
+        icon: DiGoogleCloudPlatform,
+        class: 'text-[#0255d6]'
+    }
+]
+
+export const ai = [
+    {
+        title: 'Langchain (AI Agents)',
+        icon: SiLangchain,
+        class: 'text-[#1c3a3a]'
+    },
+    {
+        title: 'LLM (Gemini)',
+        icon: SiGooglegemini,
+        class: 'text-[#457cf1]'
     }
 ]
