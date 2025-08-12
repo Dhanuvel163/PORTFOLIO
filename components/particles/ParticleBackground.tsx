@@ -29,6 +29,10 @@ function ParticleBackground({
   const animationRef = useRef<number>();
   const scrollY = useRef<number>(0);
 
+  const handleScroll = useCallback(() => {
+    scrollY.current = window.scrollY;
+  }, []);
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -59,10 +63,6 @@ function ParticleBackground({
         });
       }
     };
-
-    const handleScroll = useCallback(() => {
-      scrollY.current = window.scrollY;
-    }, []);
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
