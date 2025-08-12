@@ -1,7 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Work_Sans } from 'next/font/google'
-import Lenis from './@lenis/lenis'
 import DarkMode from './@darkmode/darkmode'
 
 const work_sans = Work_Sans({ subsets: ['latin'] })
@@ -13,9 +12,9 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children, header, footer
+  children, header, footer, darkmode, lenis
 }: {
-  children: React.ReactNode, header: React.ReactNode, footer: React.ReactNode
+  children: React.ReactNode, header: React.ReactNode, footer: React.ReactNode, darkmode: React.ReactNode, lenis: React.ReactNode
 }) {
   return (
     <DarkMode>
