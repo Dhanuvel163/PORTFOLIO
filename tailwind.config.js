@@ -20,10 +20,45 @@ module.exports = {
           '70%,80%,90%':{
             width: '100%'
           }
+        },
+        'float-slow': {
+          '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+          '50%': { transform: 'translateY(-20px) rotate(180deg)' }
+        },
+        'float-medium': {
+          '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+          '50%': { transform: 'translateY(-15px) rotate(90deg)' }
+        },
+        'float-fast': {
+          '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+          '50%': { transform: 'translateY(-10px) rotate(270deg)' }
+        },
+        'pulse-slow': {
+          '0%, 100%': { opacity: '0.3' },
+          '50%': { opacity: '0.6' }
+        },
+        'pulse-slower': {
+          '0%, 100%': { opacity: '0.2' },
+          '50%': { opacity: '0.5' }
+        },
+        'grid-pulse': {
+          '0%, 100%': { opacity: '0.1' },
+          '50%': { opacity: '0.3' }
+        },
+        'gradient-shift': {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' }
         }
       },
       animation:{
-        animate: 'animate 6s linear infinite'
+        animate: 'animate 6s linear infinite',
+        'float-slow': 'float-slow 8s ease-in-out infinite',
+        'float-medium': 'float-medium 6s ease-in-out infinite',
+        'float-fast': 'float-fast 4s ease-in-out infinite',
+        'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
+        'pulse-slower': 'pulse-slower 6s ease-in-out infinite',
+        'grid-pulse': 'grid-pulse 3s ease-in-out infinite',
+        'gradient-shift': 'gradient-shift 8s ease infinite'
       }
     },
     colors:{
