@@ -13,7 +13,7 @@ function Skillscard({
                     skills.map((skill)=>(
                         <div className={`text-4xl ${skill.class} group relative flex flex-col items-center transition-all duration-300 hover:scale-110 cursor-pointer`} key={skill.title}>
                             <skill.icon/>
-                            <div className="absolute top-6 mt-6 hidden flex-col items-center group-hover:flex z-20 animate-fade-in">
+                            <div className="absolute top-6 mt-6 hidden flex-col items-center group-hover:flex z-20">
                                 <div className="-mb-2 h-3 w-3 rotate-45 bg-[black] dark:bg-[white]"></div>
                                 <span className="whitespace-no-wrap relative z-10 bg-[black] dark:bg-[white] dark:text-[black] p-2 text-xs leading-none text-[white] shadow-lg rounded min-w-max backdrop-blur-sm">{skill.title}</span>
                             </div>

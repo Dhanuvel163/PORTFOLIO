@@ -24,12 +24,12 @@ function Projects(){
             {/* Animated background */}
             <div className="absolute inset-0 bg-gradient-to-tr from-white via-primary/5 to-secondary dark:from-darksecondary dark:via-primary/10 dark:to-darkprimary"></div>
             <div ref={containerRef}>
-                <h2 className="relative z-10 text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold text-center text-[black] dark:text-[white] backdrop-blur-sm bg-white/10 dark:bg-black/10 rounded-lg p-4 mb-6">Projects</h2>
+                <h2 className="relative z-10 text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold text-center text-[black] dark:text-[white]">Projects</h2>
                 <div className="relative z-10 mt-6">
                     {
                         projectsData.map((project)=>(
                             <div className="flex justify-center" key={project.title}>
-                                <div className="block 750:flex bg-[white]/80 backdrop-blur-sm rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] mt-3 shadow-lg relative hover:z-20 overflow-hidden max-w-none 1100:max-w-[80%] dark:bg-darksecondary/80 dark:text-[white] dark:ring-[rgb(255,255,255)]/[0.3] transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]">
+                                <div className="block 750:flex bg-[white]/80 backdrop-blur-sm rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] mt-3 shadow-lg relative hover:z-20 overflow-hidden max-w-none 1100:max-w-[80%] dark:bg-darksecondary/80 dark:text-[white] dark:ring-[rgb(255,255,255)]/[0.3] transition-all duration-300 hover:shadow-2xl hover:scale-[1.0075]">
                                     <div className="relative w-full 750:w-80 ring-1 ring-[rgb(51,65,85)]/[0.1] 750:hidden">
                                         <Image src={project.image} height={project.height} width={project.weight} layout='responsive' objectFit='contain' alt="project image"/>
                                     </div>
