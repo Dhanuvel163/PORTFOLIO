@@ -42,7 +42,7 @@ function Intro(){
                     </h1>
                 </div>
                 <div ref={containerRef} className='invisible relative z-10'>
-                    <h2 className="mt-6 text-base 300:text-xl text-center dark:text-[white] backdrop-blur-sm bg-white/10 dark:bg-black/10 rounded-lg p-4">
+                    <h2 className="mt-6 text-base 300:text-xl text-center dark:text-[white] bg-white/10 dark:bg-black/10 rounded-lg p-4">
                         A <span className="text-primary">Full Stack Developer</span> who is passionate, creative, and driven to produce outstanding digital experiences. Connect with me to create seamless, user-friendly, and cutting-edge apps.
                     </h2>
                     <div className='flex flex-wrap justify-center items-center mt-6 text-2xl gap-2 350:gap-3 dark:text-[white] relative z-10'>
