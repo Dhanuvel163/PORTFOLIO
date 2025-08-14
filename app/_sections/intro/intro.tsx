@@ -15,7 +15,7 @@ function Intro(){
         const visibility = gsap.to(containerRef.current,{css:{visibility:'visible'},duration:0})
         const tl = gsap.timeline()
         tl.from([containerRef.current?.children[0]],{y:20,ease:Power3.easeOut,opacity:0,duration:0.8})
-        .from([containerRef.current?.children[1].children],{opacity:0,ease:Power3.easeOut,y:20,stagger:0.1,duration:0.8})
+        .from([containerRef.current?.children[1].children],{opacity:0,ease:Power3.easeOut,y:20,stagger:0.2,duration:0.8})
 
         return ()=>{
             tl.kill()

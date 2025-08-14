@@ -36,7 +36,7 @@ export function animateProjects(
                 start: "top 90%",
                 end: "bottom 98%",
             },
-            duration: 0.8,
+            duration: 1.1,
             ease: Power3.easeInOut,
         },
         true

@@ -1,6 +1,7 @@
 import { animateChildren } from "@/utils/tweens"
 import { RefObject } from "react"
 import { Power3 } from "gsap"
+const viewportWidth = window.innerWidth;
 
 export function animateAbout(
     gsap:GSAP,tweens:gsap.core.Tween[],containerRef:RefObject<HTMLDivElement>,
@@ -21,7 +22,7 @@ export function animateAbout(
                     start: "top 95%",
                     end: "bottom 95%",
                 },
-                duration: 0.5,
+                duration: 0.2,
                 ease: Power3.easeOut,
             }
         )
@@ -37,7 +38,7 @@ export function animateAbout(
                 start: "top 90%",
                 end: "bottom 98%",
             },
-            duration: 0.2,
+            duration: viewportWidth<=750 ? 0.7 : 0.5,
             ease: Power3.easeInOut,
         },
         true
@@ -53,7 +54,7 @@ export function animateAbout(
                 start: "top 90%",
                 end: "bottom 98%",
             },
-            duration: 0.2,
+            duration: viewportWidth<=750 ? 0.7 : 0.5,
             ease: Power3.easeInOut,
         },
         true
