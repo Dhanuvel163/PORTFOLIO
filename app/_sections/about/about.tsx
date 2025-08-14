@@ -21,7 +21,8 @@ function About(){
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger)
         const tweens : gsap.core.Tween[] = [];
-        animateAbout(gsap,tweens,containerRef,skillsRef,iconsRef)
+        const viewportWidth = window.innerWidth;
+        animateAbout(gsap,tweens,containerRef,skillsRef,iconsRef,viewportWidth)
         return () => {
             tweens.forEach((tween)=>tween.kill())
         }

@@ -2,11 +2,11 @@
 import { animateChildren } from "@/utils/tweens"
 import { RefObject } from "react"
 import { Power3 } from "gsap"
-const viewportWidth = window.innerWidth;
 
 export function animateAbout(
     gsap:GSAP,tweens:gsap.core.Tween[],containerRef:RefObject<HTMLDivElement>,
-    skillsRef:RefObject<HTMLDivElement>,iconsRef:RefObject<HTMLDivElement>
+    skillsRef:RefObject<HTMLDivElement>,iconsRef:RefObject<HTMLDivElement>,
+    viewportWidth: number
 ){
     tweens.push(
         gsap.to(containerRef.current,{css:{visibility:'visible'},duration:0})        
