@@ -38,7 +38,8 @@ function Projects(){
                     {
                         projectsData.map((project)=>(
                             <div className="flex justify-center" key={project.title}>
-                                <div className="block 750:flex bg-[white]/80 backdrop-blur-sm rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] mt-3 shadow-lg relative hover:z-20 overflow-hidden max-w-none 1100:max-w-[80%] dark:bg-darksecondary/80 dark:text-[white] dark:ring-[rgb(255,255,255)]/[0.3] transition-all duration-300 hover:shadow-2xl hover:scale-[1.0075]">
+                                {/* <div className="block 750:flex bg-[white]/80 backdrop-blur-sm rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] mt-3 shadow-lg relative hover:z-20 overflow-hidden max-w-none 1100:max-w-[80%] dark:bg-darksecondary/80 dark:text-[white] dark:ring-[rgb(255,255,255)]/[0.3] transition-all duration-300 hover:shadow-2xl hover:scale-[1.0075]"> */}
+                                <div className="block 750:flex bg-[white]/80 backdrop-blur-sm rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] mt-3 shadow-lg relative overflow-hidden max-w-none 1100:max-w-[80%] dark:bg-darksecondary/80 dark:text-[white] dark:ring-[rgb(255,255,255)]/[0.3] transition-all duration-300">
                                     <div className="relative w-full 750:w-80 ring-1 ring-[rgb(51,65,85)]/[0.1] 750:hidden">
                                         <Image src={project.image} height={project.height} width={project.weight} layout='responsive' objectFit='contain' alt="project image"/>
                                     </div>

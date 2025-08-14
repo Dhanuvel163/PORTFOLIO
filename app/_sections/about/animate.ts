@@ -21,7 +21,7 @@ export function animateAbout(
                     start: "top 95%",
                     end: "bottom 95%",
                 },
-                duration: 0.8,
+                duration: 0.5,
                 ease: Power3.easeOut,
             }
         )
@@ -31,14 +31,14 @@ export function animateAbout(
     animateChildren(
         skillsRef.current, tweens,
         {
-            x:'-300px',
+            x:'-100px',
             opacity: 0,
             scrollTrigger: {
-                start: "top 98%",
+                start: "top 90%",
                 end: "bottom 98%",
             },
-            duration: 0.8,
-            ease: Power3.easeOut,
+            duration: 0.2,
+            ease: Power3.easeInOut,
         },
         true
     )
@@ -47,14 +47,14 @@ export function animateAbout(
     animateChildren(
         iconsRef.current, tweens,
         {
-            x:'300px',
+            x:'100px',
             opacity: 0,
             scrollTrigger: {
-                start: "top 98%",
+                start: "top 90%",
                 end: "bottom 98%",
             },
-            duration: 0.8,
-            ease: Power3.easeOut,
+            duration: 0.2,
+            ease: Power3.easeInOut,
         },
         true
     )
