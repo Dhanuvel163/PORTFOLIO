@@ -1,3 +1,4 @@
+'use client';
 import { animateChildren } from "@/utils/tweens"
 import { RefObject } from "react"
 import { Power3 } from "gsap"
