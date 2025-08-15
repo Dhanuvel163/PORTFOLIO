@@ -20,7 +20,7 @@ function Sidebar({ isOpen, onClose = ()=>{} }: SidebarProps) {
   const isHomePage = pathname === '/';
 
   const navigationItems = [
-    { name: 'Home', icon: <FaHome />, href: '/', scrollTo: 'intro' },
+    { name: 'Home', icon: <FaHome />, href: '/', scrollTo: null },
     // { name: 'Skills', icon: <FaUser />, href: '/', scrollTo: 'skills' },
     { name: 'Projects', icon: <FaProjectDiagram />, href: '/projects', scrollTo: null },
   ];
@@ -39,8 +39,10 @@ function Sidebar({ isOpen, onClose = ()=>{} }: SidebarProps) {
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         onClick={onClose}/>
-      <div className={`fixed top-0 left-0 h-full w-80 bg-white/95 dark:bg-darkprimary/95 backdrop-blur-lg border-r border-[#e4e0e0] dark:border-[#E5E7EB6E] z-50 transform transition-transform duration-300 ease-in-out ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+      <div className={`
+        fixed top-0 left-0 h-full w-80 bg-white/95 dark:bg-darkprimary/95 backdrop-blur-lg border-r 
+        border-[#e4e0e0] dark:border-[#E5E7EB6E] z-50 transform transition-transform duration-300 
+        ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'} shadow-md`}>
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-6 border-b border-[#E5E7EB6E] dark:border-gray-700">
             <h2 className="text-xl font-bold text-gray-800 dark:text-secondary">Menu</h2>

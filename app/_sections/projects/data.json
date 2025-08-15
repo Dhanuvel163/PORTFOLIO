@@ -37,7 +37,7 @@
     },
     {
         "title" : "TraceLyfe",
-        "description": "Tracelyfe is a compact, ABDM-certified micro-Hospital Management Information System (HMIS) featuring integrated patient engagement and vitals-tracing capabilities that streamline health record management. Designed to simplify healthcare workflows, Tracelyfe enables seamless data handling by leveraging the Ayushman Bharat Digital Mission (ABDM) integration for efficient operations and enhanced patient care.",
+        "description": "Tracelyfe is a compact, micro-Hospital Management Information System (HMIS) featuring integrated patient engagement and vitals-tracing capabilities that streamline health record management. Designed to simplify healthcare workflows, it leverages the Ayushman Bharat Digital Mission (ABDM) integration for efficient operations and enhanced patient care.",
         "skills": ["React"],
         "actions" : [{
             "action":"View", "link":"https://www.tracelyfe.com/", "label": "View TraceLyfe"
@@ -73,7 +73,7 @@
     },
     {
         "title" : "Owlprints",
-        "description": "A comprehensive website catering to a B2B t-shirt printing company. The website includes an efficient admin portal enabling seamless management of all bulk orders, invoices, and related tasks for merchants. Additionally, there's a user-friendly merchant site where clients can conveniently place orders for custom printed shirts, specifying their desired designs, colors, and other personalized details. This platform offers a streamlined experience for both the company and its merchants, facilitating smooth transactions and customizations for bulk t-shirt orders.",
+        "description": "A comprehensive website catering to a B2B t-shirt printing company. The website includes an efficient portal enabling management of all bulk orders, invoices etc. Additionally, there's a user-friendly site where clients can conveniently place orders for custom printed shirts, specifying their desired designs, colors, and other personalized details.",
         "skills": ["Angular"],
         "actions" : [{
             "action":"View", "link":"https://owlprints.in/", "label": "View Owlprints"
@@ -81,6 +81,78 @@
         "image": "/images/projects/owlprints.png",
         "height": 798,
         "weight": 1592,
+        "starred": false
+    },
+    {
+        "title" : "Umwelt AI",
+        "description": "An AI-powered employee experience & analytics platform featuring “Nikki,” a conversational Officer that automates empathetic engagement, sentiment analysis, and predictive insights across the employee lifecycle—from onboarding to exit. Delivers real-time HR intelligence via dashboards, proactive risk alerts, and integrations with systems like SAP, Oracle etc.",
+        "skills": ["Angular"],
+        "actions" : [{
+            "action":"View", "link":"https://umwelt.ai/", "label": "View Umwelt"
+        }],
+        "image": "/images/projects/umwelt.png",
+        "height": 798,
+        "weight": 1392,
+        "starred": false
+    },
+    {
+        "title" : "Get Hikma",
+        "description": "An on-demand education platform that enables students to access personalized one-on-one, group, and instant mentoring sessions across any subject—delivered at their convenience.",
+        "skills": ["React Native", "Node JS"],
+        "actions" : [{
+            "action":"View", "link":"https://apps.apple.com/us/app/get-hikma/id1614930767", "label": "View Hikma"
+        }],
+        "image": "/images/projects/gethikma.jpg",
+        "height": 798,
+        "weight": 1592,
+        "starred": false
+    },
+    {
+        "title" : "The Body App",
+        "description": "A mobile fitness companion for bodybuilding enthusiasts, offering features such as training plans, nutrition tracking, progress logging, and one-on-one trainer interaction via video sharing and messaging.",
+        "skills": ["React Native", "Node JS"],
+        "actions" : [{
+            "action":"View", "link":"https://apps.apple.com/us/app/get-hikma/id1614930767", "label": "View Body App"
+        }],
+        "image": "/images/projects/bodyapp.webp",
+        "height": 798,
+        "weight": 798,
+        "starred": false
+    },
+    {
+        "title" : "Gulf Research Meeting",
+        "description": "App to promote academic exchange and provide factual insights on Gulf studies in an accessible, event-centric interface.",
+        "skills": ["Ionic", "Cordova", "Capacitor"],
+        "actions" : [{
+            "action":"View", "link":"https://play.google.com/store/apps/details?id=io.framework7.grms&hl=en_IN", "label": "View GRM"
+        }],
+        "image": "/images/projects/grm.webp",
+        "height": 798,
+        "weight": 798,
+        "starred": false
+    },
+    {
+        "title" : "Sphelical",
+        "description": "Landing page of a company dedicated to creating various AI-powered assistants, including desktop agents and browser agents, that are designed to transform everyday technological experiences",
+        "skills": ["Astro"],
+        "actions" : [{
+            "action":"View", "link":"https://www.sphelical.com/", "label": "View Sphelical"
+        }],
+        "image": "/images/projects/sphelical.png",
+        "height": 1366,
+        "weight": 2290,
+        "starred": false
+    },
+    {
+        "title" : "Incubr",
+        "description": "Landing page of a company based in Gurugram (Gurgaon), Haryana. It was incorporated on September 28, 2015, and remains active as of 2025.",
+        "skills": ["React"],
+        "actions" : [{
+            "action":"View", "link":"https://incubr.com/", "label": "View Incubr"
+        }],
+        "image": "/images/projects/incubr.png",
+        "height": 909,
+        "weight": 1526,
         "starred": false
     }
 ]
