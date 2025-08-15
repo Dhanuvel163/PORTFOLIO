@@ -1,7 +1,7 @@
 "use client"
 import Button from "@/components/button/button";
 import Image from "next/legacy/image";
-import { FaEye } from "react-icons/fa";
+import { FaEye, FaArrowRight } from "react-icons/fa";
 import projectsData from './data.json';
 import Link from "next/link";
 import {useRef,useEffect} from 'react';
@@ -11,8 +11,14 @@ import { animateProjects } from "./animate";
 import GeometricShapes from "@/components/geometric/GeometricShapes";
 import ParticleBackground from "@/components/particles/ParticleBackground";
 
-function Projects(){
+function Projects({ showAll = false }: { showAll?: boolean }){
     const containerRef = useRef<HTMLDivElement>(null);
+    
+    // Filter projects based on showAll prop
+    const displayProjects = showAll 
+        ? projectsData 
+        : projectsData.filter(project => project.starred).slice(0, 5);
+    
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger)
         const tweens : gsap.core.Tween[] = [];
@@ -36,9 +42,8 @@ function Projects(){
                 <h2 className="relative z-10 text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold text-center text-[black] dark:text-[white]">Projects</h2>
                 <div className="relative z-10 mt-6">
                     {
-                        projectsData.map((project)=>(
+                        displayProjects.map((project)=>(
                             <div className="flex justify-center" key={project.title}>
-                                {/* <div className="block 750:flex bg-[white]/80 backdrop-blur-sm rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] mt-3 shadow-lg relative hover:z-20 overflow-hidden max-w-none 1100:max-w-[80%] dark:bg-darksecondary/80 dark:text-[white] dark:ring-[rgb(255,255,255)]/[0.3] transition-all duration-300 hover:shadow-2xl hover:scale-[1.0075]"> */}
                                 <div className="block 750:flex bg-[white]/80 backdrop-blur-sm rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] mt-3 shadow-lg relative overflow-hidden max-w-none 1100:max-w-[80%] dark:bg-darksecondary/80 dark:text-[white] dark:ring-[rgb(255,255,255)]/[0.3] transition-all duration-300">
                                     <div className="relative w-full 750:w-80 ring-1 ring-[rgb(51,65,85)]/[0.1] 750:hidden">
                                         <Image src={project.image} height={project.height} width={project.weight} layout='responsive' objectFit='contain' alt="project image"/>
@@ -83,6 +88,20 @@ function Projects(){
                         ))
                     }
                 </div>
+                
+                {/* View All Button - only show on home page */}
+                {!showAll && (
+                    <div className="relative z-10 flex justify-center mt-12">
+                        <Link href="/projects">
+                            <Button 
+                                className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white font-bold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 backdrop-blur-sm border-0"
+                                icon={<FaArrowRight className="ml-2" />}
+                                title="View All Projects"
+                                label="View All Projects"
+                            />
+                        </Link>
+                    </div>
+                )}
             </div>
         </section>
     )

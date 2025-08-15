@@ -8,7 +8,8 @@
         }],
         "image": "/images/projects/riskcovry_final.png",
         "height": 1358,
-        "weight": 2283
+        "weight": 2283,
+        "starred": true
     },
     {
         "title" : "Chad Trader",
@@ -19,7 +20,8 @@
         }],
         "image": "/images/projects/chadtrader.png",
         "height": 1360,
-        "weight": 2284
+        "weight": 2284,
+        "starred": true
     },
     {
         "title" : "6Enigma",
@@ -30,7 +32,8 @@
         }],
         "image": "/images/projects/6enigma.png",
         "height": 1358,
-        "weight": 2282
+        "weight": 2282,
+        "starred": true
     },
     {
         "title" : "TraceLyfe",
@@ -41,7 +44,8 @@
         }],
         "image": "/images/projects/tracelyfe.png",
         "height": 1360,
-        "weight": 2284
+        "weight": 2284,
+        "starred": true
     },
     {
         "title" : "Extramileplay",
@@ -52,7 +56,8 @@
         }],
         "image": "/images/projects/extramileplay.png",
         "height": 1366,
-        "weight": 2290
+        "weight": 2290,
+        "starred": true
     },
     {
         "title" : "Kalanju",
@@ -63,7 +68,8 @@
         }],
         "image": "/images/projects/kalanju.png",
         "height": 885,
-        "weight": 1893
+        "weight": 1893,
+        "starred": false
     },
     {
         "title" : "Owlprints",
@@ -74,6 +80,7 @@
         }],
         "image": "/images/projects/owlprints.png",
         "height": 798,
-        "weight": 1592
+        "weight": 1592,
+        "starred": false
     }
 ]
