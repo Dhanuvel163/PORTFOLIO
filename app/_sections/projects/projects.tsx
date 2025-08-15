@@ -13,8 +13,6 @@ import ParticleBackground from "@/components/particles/ParticleBackground";
 
 function Projects({ showAll = false }: { showAll?: boolean }){
     const containerRef = useRef<HTMLDivElement>(null);
-    
-    // Filter projects based on showAll prop
     const displayProjects = showAll 
         ? projectsData 
         : projectsData.filter(project => project.starred).slice(0, 5);
@@ -35,11 +33,12 @@ function Projects({ showAll = false }: { showAll?: boolean }){
             <GeometricShapes />
             {/* Particle system */}
             <ParticleBackground 
-                particleCount={20} 
-                colors={['#9004ef', '#ffffff60', '#f9f9f960']}
-                scrollMultiplier={0.4}/>
+                particleCount={20} colors={['#9004ef', '#ffffff60', '#f9f9f960']} scrollMultiplier={0.4}/>
             <div ref={containerRef}>
-                <h2 className="relative z-10 text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold text-center text-[black] dark:text-[white]">Projects</h2>
+                {
+                    !showAll &&
+                    <h2 className="relative z-10 text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold text-center text-[black] dark:text-[white]">Projects</h2>
+                }
                 <div className="relative z-10 mt-6">
                     {
                         displayProjects.map((project)=>(
@@ -54,9 +53,7 @@ function Projects({ showAll = false }: { showAll?: boolean }){
                                     <div className="px-5 500:px-10 py-5 750:flex-[0%] grid">
                                         <div>
                                             <h3 className="text-xl 500:text-3xl font-bold">{project.title}</h3>
-                                            <p className="text-xs 500:text-sm mt-3">
-                                                {project.description}
-                                            </p>
+                                            <p className="text-xs 500:text-sm mt-3">{project.description}</p>
                                             {
                                                 (project.skills.length > 0) &&
                                                 <>
@@ -93,12 +90,10 @@ function Projects({ showAll = false }: { showAll?: boolean }){
                 {!showAll && (
                     <div className="relative z-10 flex justify-center mt-12">
                         <Link href="/projects">
-                            <Button 
-                                className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white font-bold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 backdrop-blur-sm border-0"
+                            <Button
+                                className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-secondary font-bold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 backdrop-blur-sm border-0"
                                 icon={<FaArrowRight className="ml-2" />}
-                                title="View All Projects"
-                                label="View All Projects"
-                            />
+                                title="View All Projects" label="View All Projects"/>
                         </Link>
                     </div>
                 )}
