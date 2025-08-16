@@ -29,7 +29,7 @@ function Header({ isOpen, onClose = ()=>{}, onOpen = ()=>{} }: HeaderProps){
                         ? <Button className="dark:hover:!bg-darkprimary/30 font-bold"
                             icon={<MdLightMode/>} label='Dark' onClick={()=>theme.toggleTheme()}/>
                         : <Button className="dark:hover:!bg-darkprimary/30 font-bold"
-                        icon={<MdOutlineNightlight/>} label='Light' onClick={()=>theme?.toggleTheme()}/>
+                        icon={<MdOutlineNightlight className='-rotate-[30deg]'/>} label='Light' onClick={()=>theme?.toggleTheme()}/>
                     }
                 </div>
                 <div className='m-auto ml-2 280:ml-4'>

@@ -48,42 +48,6 @@
         "starred": true
     },
     {
-        "title" : "Extramileplay",
-        "description": "A website specifically designed for organizations to efficiently manage their subscribed games. With this platform, organizations can easily handle user management and grant users access to play games based on their subscriptions. It provides a seamless and user-friendly experience for both the organization and its users.",
-        "skills": ["Node JS", "PostgreSQL", "Angular"],
-        "actions" : [{
-            "action":"View", "link":"https://extramileplay.com/", "label": "View Extramileplay"
-        }],
-        "image": "/images/projects/extramileplay.png",
-        "height": 1366,
-        "weight": 2290,
-        "starred": true
-    },
-    {
-        "title" : "Kalanju",
-        "description": "Employee Management site that serves as a comprehensive solution for handling various aspects of employee data, assets, projects, leads, invoices, leaves, and other organizational matters. This all-in-one site streamlines the management process and provides an efficient platform for addressing various organizational needs.",
-        "skills": ["React.js", "Node.js", "MySQL", "Microservices"],
-        "actions" : [{
-            "action":"View", "link":"https://kalanju.com/", "label": "View Kalanju"
-        }],
-        "image": "/images/projects/kalanju.png",
-        "height": 885,
-        "weight": 1893,
-        "starred": false
-    },
-    {
-        "title" : "Owlprints",
-        "description": "A comprehensive website catering to a B2B t-shirt printing company. The website includes an efficient portal enabling management of all bulk orders, invoices etc. Additionally, there's a user-friendly site where clients can conveniently place orders for custom printed shirts, specifying their desired designs, colors, and other personalized details.",
-        "skills": ["Angular"],
-        "actions" : [{
-            "action":"View", "link":"https://owlprints.in/", "label": "View Owlprints"
-        }],
-        "image": "/images/projects/owlprints.png",
-        "height": 798,
-        "weight": 1592,
-        "starred": false
-    },
-    {
         "title" : "Umwelt AI",
         "description": "An AI-powered employee experience & analytics platform featuring “Nikki,” a conversational Officer that automates empathetic engagement, sentiment analysis, and predictive insights across the employee lifecycle—from onboarding to exit. Delivers real-time HR intelligence via dashboards, proactive risk alerts, and integrations with systems like SAP, Oracle etc.",
         "skills": ["Angular"],
@@ -117,6 +81,42 @@
         "image": "/images/projects/bodyapp.webp",
         "height": 798,
         "weight": 798,
+        "starred": true
+    },
+    {
+        "title" : "Extramileplay",
+        "description": "A website specifically designed for organizations to efficiently manage their subscribed games. With this platform, organizations can easily handle user management and grant users access to play games based on their subscriptions. It provides a seamless and user-friendly experience for both the organization and its users.",
+        "skills": ["Node JS", "PostgreSQL", "Angular"],
+        "actions" : [{
+            "action":"View", "link":"https://extramileplay.com/", "label": "View Extramileplay"
+        }],
+        "image": "/images/projects/extramileplay.png",
+        "height": 1366,
+        "weight": 2290,
+        "starred": false
+    },
+    {
+        "title" : "Kalanju",
+        "description": "Employee Management site that serves as a comprehensive solution for handling various aspects of employee data, assets, projects, leads, invoices, leaves, and other organizational matters. This all-in-one site streamlines the management process and provides an efficient platform for addressing various organizational needs.",
+        "skills": ["React.js", "Node.js", "MySQL", "Microservices"],
+        "actions" : [{
+            "action":"View", "link":"https://kalanju.com/", "label": "View Kalanju"
+        }],
+        "image": "/images/projects/kalanju.png",
+        "height": 885,
+        "weight": 1893,
+        "starred": false
+    },
+    {
+        "title" : "Owlprints",
+        "description": "A comprehensive website catering to a B2B t-shirt printing company. The website includes an efficient portal enabling management of all bulk orders, invoices etc. Additionally, there's a user-friendly site where clients can conveniently place orders for custom printed shirts, specifying their desired designs, colors, and other personalized details.",
+        "skills": ["Angular"],
+        "actions" : [{
+            "action":"View", "link":"https://owlprints.in/", "label": "View Owlprints"
+        }],
+        "image": "/images/projects/owlprints.png",
+        "height": 798,
+        "weight": 1592,
         "starred": false
     },
     {

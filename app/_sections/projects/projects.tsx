@@ -20,7 +20,7 @@ function Projects({ showAll = false }: { showAll?: boolean }){
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger)
         const tweens : gsap.core.Tween[] = [];
-        animateProjects(gsap,tweens,containerRef)
+        animateProjects(gsap,tweens,containerRef,showAll)
         return () => {
             tweens.forEach((tween)=>tween.kill())
         }

@@ -2,12 +2,10 @@
 import React, { useContext } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { ThemeContext } from '@/app/@darkmode/darkmode';
 import { MdClose } from 'react-icons/md';
 import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai';
 import { BiMailSend } from 'react-icons/bi';
-import { FaHome, FaUser, FaProjectDiagram } from 'react-icons/fa';
+import { FaHome, FaProjectDiagram } from 'react-icons/fa';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -15,10 +13,6 @@ interface SidebarProps {
 }
 
 function Sidebar({ isOpen, onClose = ()=>{} }: SidebarProps) {
-  const theme = useContext(ThemeContext);
-  const pathname = usePathname();
-  const isHomePage = pathname === '/';
-
   const navigationItems = [
     { name: 'Home', icon: <FaHome />, href: '/', scrollTo: null },
     // { name: 'Skills', icon: <FaUser />, href: '/', scrollTo: 'skills' },
@@ -56,30 +50,34 @@ function Sidebar({ isOpen, onClose = ()=>{} }: SidebarProps) {
             <div className="space-y-2">
               {navigationItems.map((item) => (
                 <div key={item.name}>
-                  {item.scrollTo && isHomePage ? (
-                    <ScrollLink
-                      to={item.scrollTo} spy={true} smooth={true}
-                      offset={0} duration={100} onClick={onClose}
-                      className="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors cursor-pointer group">
-                      <span className="text-primary group-hover:scale-110 transition-transform">
-                        {item.icon}
-                      </span>
-                      <span className="text-gray-700 dark:text-secondary font-medium">
-                        {item.name}
-                      </span>
-                    </ScrollLink>
-                  ) : (
-                    <Link
-                      href={item.href} onClick={onClose}
-                      className="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors group">
-                      <span className="text-primary group-hover:scale-110 transition-transform">
-                        {item.icon}
-                      </span>
-                      <span className="text-gray-700 dark:text-secondary font-medium">
-                        {item.name}
-                      </span>
-                    </Link>
-                  )}
+                  {
+                    // item.scrollTo && isHomePage ? (
+                    //   <ScrollLink
+                    //     to={item.scrollTo} spy={true} smooth={true}
+                    //     offset={0} duration={100} onClick={onClose}
+                    //     className="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors cursor-pointer group">
+                    //     <span className="text-primary group-hover:scale-110 transition-transform">
+                    //       {item.icon}
+                    //     </span>
+                    //     <span className="text-gray-700 dark:text-secondary font-medium">
+                    //       {item.name}
+                    //     </span>
+                    //   </ScrollLink>
+                    // ) 
+                    // : 
+                    (
+                      <Link
+                        href={item.href} onClick={onClose}
+                        className="flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors group">
+                        <span className="text-primary group-hover:scale-110 transition-transform">
+                          {item.icon}
+                        </span>
+                        <span className="text-gray-700 dark:text-secondary font-medium">
+                          {item.name}
+                        </span>
+                      </Link>
+                    )
+                  }
                 </div>
               ))}
             </div>
