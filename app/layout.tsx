@@ -2,7 +2,6 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Work_Sans } from 'next/font/google'
 import DarkMode from './@darkmode/darkmode'
-import Sidebar from '@/components/sidebar/Sidebar'
 import Navcontent from '@/components/navcontent/Navcontent'
 
 const work_sans = Work_Sans({ subsets: ['latin'] })

@@ -7,7 +7,6 @@ import AnimatedGrid from "@/components/grid/AnimatedGrid";
 export default function ProjectsPage() {
   return (
     <div className="relative pt-20">
-      {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-secondary via-white to-primary/5 dark:from-darkprimary dark:via-darkprimary dark:to-primary/10"></div>
       <AnimatedGrid />
       <ParticleBackground 
