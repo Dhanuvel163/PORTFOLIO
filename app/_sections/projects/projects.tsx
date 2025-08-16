@@ -26,7 +26,7 @@ function Projects({ showAll = false }: { showAll?: boolean }){
         }
     },[])
     return(
-        <section className="relative min-h-[100vh] pt-0 pb-4 750:pt-20 750:pb-20 flex justify-center items-center px-[5%] border-t border-[#eaeaea] border-solid dark:border-[#E5E7EB6E] overflow-hidden" id="projects">
+        <section className="relative min-h-[100vh] py-20 flex justify-center items-center px-[5%] border-t border-[#eaeaea] border-solid dark:border-[#E5E7EB6E] overflow-hidden" id="projects">
             {/* Animated background */}
             <div className="absolute inset-0 bg-gradient-to-tr from-white via-primary/5 to-secondary dark:from-darksecondary dark:via-primary/10 dark:to-darkprimary"></div>
             {/* Geometric shapes */}
