@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Work_Sans } from 'next/font/google'
 import DarkMode from './@darkmode/darkmode'
 import Navcontent from '@/components/navcontent/Navcontent'
+import Footer from './@footer/page'
 
 const work_sans = Work_Sans({ subsets: ['latin'] })
 
@@ -12,10 +13,10 @@ export const metadata: Metadata = {
   keywords: "portfolio, full stack developer, software development engineer, javascript, reactjs, nodejs, angular, nextjs, react native"
 }
 
-export default function RootLayout({
-  children, header, footer, darkmode, lenis
+export default function RootLayout({  
+  children
 }: {
-  children: React.ReactNode, header: React.ReactNode, footer: React.ReactNode, darkmode: React.ReactNode, lenis: React.ReactNode
+  children: React.ReactNode
 }) {
   return (
     <DarkMode>
@@ -24,7 +25,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-        {footer}
+        <Footer/>
       </body>
     </DarkMode>
   )
