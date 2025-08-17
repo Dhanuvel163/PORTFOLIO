@@ -24,6 +24,18 @@
         "starred": true
     },
     {
+        "title" : "VLCC",
+        "description": "A global leader in beauty, skincare, and wellness with 310 centers across 11 countries. Founded in 1989, it offers holistic services in weight management, skincare, and personal care products. Through its institutes, VLCC also trains 15,000+ students annually, contributing to skill development in the wellness industry.",
+        "skills": ["NextJs"],
+        "actions" : [{
+            "action":"View", "link":"https://vlcc.com/", "label": "View VLCC"
+        }],
+        "image": "/images/projects/vlcc.png",
+        "height": 798,
+        "weight": 1392,
+        "starred": true
+    },
+    {
         "title" : "6Enigma",
         "description": "Comprehensive data analytics portal facilitating both client and admin access, enabling real-time monitoring of video editing workflows, performance metrics, and user engagement insights.",
         "skills": ["React", "Flask", "MongoDB"],
@@ -33,7 +45,7 @@
         "image": "/images/projects/6enigma.png",
         "height": 1358,
         "weight": 2282,
-        "starred": true
+        "starred": false
     },
     {
         "title" : "TraceLyfe",
