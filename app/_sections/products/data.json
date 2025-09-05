@@ -1,16 +1,28 @@
 [
     {
-        "title" : "CoverCraft AI - Smart Cover Letter Generator",
+        "title" : "CoverAI – Cover Letter & Custom Question Answering Assistant",
         "description": "Transform your job applications with AI-generated cover letters tailored to any job description. Upload your profile, paste the JD, and let our AI create compelling cover letters that get you noticed.",
         "skills": ["Node JS", "React", "MongoDB"],
         "actions" : [{
-            "action":"View", "link":"https://covercraft-genai.vercel.app/", "label": "View CoverCraft AI"
+            "action":"View", "link":"https://coverai.dhanavel.com/", "label": "View CoverAI"
         },{
             "action":"Github", "link":"https://github.com/Dhanuvel163/COVER_GENERATOR", "label": "View Github"
         }],
         "image": "/images/products/cover_craft.png",
         "height": 1358,
         "weight": 2283,
+        "starred": true
+    },
+    {
+        "title" : "CoverAI – Cover Letter & Custom Question Answering Assistant (Extension)",
+        "description": "Transform your job applications with AI-generated cover letters tailored to any job description. Upload your profile, paste the JD, and let our AI create compelling cover letters that get you noticed.",
+        "skills": ["Html", "Css", "Javascript", "Webpack"],
+        "actions" : [{
+            "action":"View", "link":"https://chromewebstore.google.com/detail/jgicpdojkhomhbojigkklnbopaebbdeh?utm_source=portfolio", "label": "View CoverAI Extension"
+        }],
+        "image": "/images/products/cover_craft_ext.png",
+        "height": 280,
+        "weight": 440,
         "starred": true
     }
 ]
