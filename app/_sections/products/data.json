@@ -15,7 +15,7 @@
     },
     {
         "title" : "CoverAI – Cover Letter & Custom Question Answering Assistant (Extension)",
-        "description": "Transform your job applications with AI-generated cover letters tailored to any job description. Upload your profile, paste the JD, and let our AI create compelling cover letters that get you noticed.",
+        "description": "Supercharge your job applications with our AI-powered cover letter generator extension! Upload your profile, auto-extract job details, and instantly generate a personalized cover letter along with answers to custom questions—without ever leaving your job page.",
         "skills": ["Html", "Css", "Javascript", "Webpack"],
         "actions" : [{
             "action":"View", "link":"https://chromewebstore.google.com/detail/jgicpdojkhomhbojigkklnbopaebbdeh?utm_source=portfolio", "label": "View CoverAI Extension"
