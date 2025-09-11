@@ -20,8 +20,8 @@ export function animateAbout(
                 opacity: 0,
                 scrollTrigger: {
                     trigger: containerRef.current,
-                    start: "top 95%",
-                    end: "bottom 95%",
+                    start: "top 98%",
+                    end: "bottom 100%",
                 },
                 duration: 0.2,
                 ease: Power3.easeOut,
@@ -36,7 +36,7 @@ export function animateAbout(
             x:'-100px',
             opacity: 0,
             scrollTrigger: {
-                start: "top 90%",
+                start: "top 98%",
                 end: "bottom 98%",
             },
             duration: viewportWidth<=750 ? 0.7 : 0.5,
@@ -52,7 +52,7 @@ export function animateAbout(
             x:'100px',
             opacity: 0,
             scrollTrigger: {
-                start: "top 90%",
+                start: "top 98%",
                 end: "bottom 98%",
             },
             duration: viewportWidth<=750 ? 0.7 : 0.5,

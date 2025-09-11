@@ -20,6 +20,7 @@ export function animateProjects(
                         trigger: containerRef.current,
                         start: "top 95%",
                         end: "bottom 95%",
+                        // markers: true
                     },
                     duration: 0.2,
                     ease: Power3.easeOut,
@@ -35,8 +36,8 @@ export function animateProjects(
             x:'-100px',
             opacity: 0,
             scrollTrigger: {
-                start: "top 90%",
-                end: "bottom 98%",
+                start: "top 98%",
+                end: "bottom 0%"
             },
             duration: 1.1,
             ease: Power3.easeInOut,

@@ -35,8 +35,9 @@ export function animateProjects(
             x:'-100px',
             opacity: 0,
             scrollTrigger: {
-                start: "top 90%",
+                start: "top 98%",
                 end: "bottom 98%",
+                // markers: true
             },
             duration: 1.1,
             ease: Power3.easeInOut,
