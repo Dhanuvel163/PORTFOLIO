@@ -19,11 +19,13 @@ function About(){
     const iconsRef = useRef<HTMLDivElement>(null);
     
     useEffect(()=>{
+        if(window.innerWidth < 600) return;
         gsap.registerPlugin(ScrollTrigger)
         const tweens : gsap.core.Tween[] = [];
         const viewportWidth = window.innerWidth;
         animateAbout(gsap,tweens,containerRef,skillsRef,iconsRef,viewportWidth)
         return () => {
+            if(window.innerWidth < 600) return;
             tweens.forEach((tween)=>tween.kill())
         }
     },[])
@@ -38,7 +40,7 @@ function About(){
                 particleCount={25} 
                 colors={['#9004ef', '#f9f9f940', '#00000020']}
                 scrollMultiplier={0.6}/>
-            <div ref={containerRef} className='invisible'>
+            <div ref={containerRef} className='600:invisible'>
                 <h2 className="relative z-10 text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold text-center text-[black] dark:text-[white]">Skills</h2>
                 
                 <div className='relative z-10 block mt-6 600:flex'>

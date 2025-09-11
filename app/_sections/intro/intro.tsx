@@ -12,12 +12,14 @@ import GeometricShapes from '@/components/geometric/GeometricShapes';
 function Intro(){
     let containerRef = useRef<HTMLDivElement | null>(null)
     useEffect(()=>{
+        if(window.innerWidth < 600) return;
         const visibility = gsap.to(containerRef.current,{css:{visibility:'visible'},duration:0})
         const tl = gsap.timeline()
         tl.from([containerRef.current?.children[0]],{y:20,ease:Power3.easeOut,opacity:0,duration:0.8})
         .from([containerRef.current?.children[1].children],{opacity:0,ease:Power3.easeOut,y:20,stagger:0.2,duration:0.8})
 
         return ()=>{
+            if(window.innerWidth < 600) return;
             tl.kill()
             visibility.kill()
         }
@@ -41,7 +43,7 @@ function Intro(){
                         Hello, I&apos;m Dhanavel R
                     </h1>
                 </div>
-                <div ref={containerRef} className='invisible relative z-10'>
+                <div ref={containerRef} className='600:invisible relative z-10'>
                     <h2 className="mt-6 text-base 300:text-xl text-center dark:text-[white] bg-white/10 dark:bg-black/10 rounded-lg p-4">
                         A <span className="text-primary">Full Stack Developer</span> who is passionate, creative, and driven to produce outstanding digital experiences. Connect with me to create seamless, user-friendly, and cutting-edge apps.
                     </h2>

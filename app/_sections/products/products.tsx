@@ -18,10 +18,12 @@ function Products({ showAll = false }: { showAll?: boolean }){
         : productsData.filter(project => project.starred).slice(0, 5);
     
     useEffect(()=>{
+        if(window.innerWidth < 600) return;
         gsap.registerPlugin(ScrollTrigger)
         const tweens : gsap.core.Tween[] = [];
         animateProjects(gsap,tweens,containerRef,showAll)
         return () => {
+            if(window.innerWidth < 600) return;
             tweens.forEach((tween)=>tween.kill())
         }
     },[])
