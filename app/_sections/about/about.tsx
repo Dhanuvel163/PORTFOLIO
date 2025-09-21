@@ -2,12 +2,12 @@
 import { useEffect, useRef } from 'react';
 import Skillscard from '@/components/skillscard/Skillscard';
 import {frontend,backend,tools,ai,database} from './data';
-import {gsap} from 'gsap';
-import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
+// import {gsap} from 'gsap';
+// import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
 import {RiLightbulbFlashFill} from 'react-icons/ri';
 import {SiFastapi} from 'react-icons/si';
 import Iconcard from '@/components/iconcard/iconcard';
-import { animateAbout } from './animate';
+// import { animateAbout } from './animate';
 import { BiSolidMobileVibration } from "react-icons/bi";
 import { GrTechnology } from "react-icons/gr";
 import AnimatedGrid from '@/components/grid/AnimatedGrid';
@@ -19,15 +19,15 @@ function About(){
     const iconsRef = useRef<HTMLDivElement>(null);
     
     useEffect(()=>{
-        if(window.innerWidth < 600) return;
-        gsap.registerPlugin(ScrollTrigger)
-        const tweens : gsap.core.Tween[] = [];
-        const viewportWidth = window.innerWidth;
-        animateAbout(gsap,tweens,containerRef,skillsRef,iconsRef,viewportWidth)
-        return () => {
-            if(window.innerWidth < 600) return;
-            tweens.forEach((tween)=>tween.kill())
-        }
+        // if(window.innerWidth < 600) return;
+        // gsap.registerPlugin(ScrollTrigger)
+        // const tweens : gsap.core.Tween[] = [];
+        // const viewportWidth = window.innerWidth;
+        // animateAbout(gsap,tweens,containerRef,skillsRef,iconsRef,viewportWidth)
+        // return () => {
+        //     if(window.innerWidth < 600) return;
+        //     tweens.forEach((tween)=>tween.kill())
+        // }
     },[])
     return(
         <section className="relative min-h-[100vh] py-20 flex justify-center items-center px-[5%] border-t border-[#eaeaea] border-solid max-w-[100vw] overflow-hidden dark:border-[#E5E7EB6E]" id='skills'>
@@ -40,7 +40,7 @@ function About(){
                 particleCount={25} 
                 colors={['#9004ef', '#f9f9f940', '#00000020']}
                 scrollMultiplier={0.6}/>
-            <div ref={containerRef} className='600:invisible'>
+            <div ref={containerRef} className='600:invisible--'>
                 <h2 className="relative z-10 text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold text-center text-[black] dark:text-[white]">Skills</h2>
                 
                 <div className='relative z-10 block mt-6 600:flex'>

@@ -5,9 +5,9 @@ import { FaEye, FaArrowRight } from "react-icons/fa";
 import projectsData from './data.json';
 import Link from "next/link";
 import {useRef,useEffect} from 'react';
-import {gsap} from "gsap";
-import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
-import { animateProjects } from "./animate";
+// import {gsap} from "gsap";
+// import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
+// import { animateProjects } from "./animate";
 import GeometricShapes from "@/components/geometric/GeometricShapes";
 import ParticleBackground from "@/components/particles/ParticleBackground";
 
@@ -18,14 +18,14 @@ function Projects({ showAll = false }: { showAll?: boolean }){
         : projectsData.filter(project => project.starred).slice(0, 5);
     
     useEffect(()=>{
-        if(window.innerWidth < 600) return;
-        gsap.registerPlugin(ScrollTrigger)
-        const tweens : gsap.core.Tween[] = [];
-        animateProjects(gsap,tweens,containerRef,showAll)
-        return () => {
-            if(window.innerWidth < 600) return;
-            tweens.forEach((tween)=>tween.kill())
-        }
+        // if(window.innerWidth < 600) return;
+        // gsap.registerPlugin(ScrollTrigger)
+        // const tweens : gsap.core.Tween[] = [];
+        // animateProjects(gsap,tweens,containerRef,showAll)
+        // return () => {
+        //     if(window.innerWidth < 600) return;
+        //     tweens.forEach((tween)=>tween.kill())
+        // }
     },[])
     return(
         <section className="relative min-h-[100vh] py-20 flex justify-center items-center px-[5%] border-t border-[#eaeaea] border-solid dark:border-[#E5E7EB6E] overflow-hidden" id="projects">
