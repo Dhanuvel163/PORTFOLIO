@@ -61,7 +61,7 @@ export default function RootLayout({
       />
       {
         appsJsonLd.map((app, index) => (
-          <Script
+          <Script key={`software-application-ld-person-${index}`}
             id={`software-application-ld-person-${index}`}
             type="application/ld+json"
             strategy="afterInteractive"
@@ -71,7 +71,7 @@ export default function RootLayout({
       }
       {
         productJsonLd.map((product, index) => (
-          <Script
+          <Script key={`product-ld-person-${index}`}
             id={`product-ld-person-${index}`}
             type="application/ld+json"
             strategy="afterInteractive"
