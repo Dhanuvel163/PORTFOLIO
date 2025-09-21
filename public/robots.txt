@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.dhanavel.com/
+
+# Sitemaps
+Sitemap: https://www.dhanavel.com/sitemap.xml
