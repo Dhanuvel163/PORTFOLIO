@@ -57,6 +57,30 @@ export default function RootLayout({
       "https://x.com/dhanavel19"
     ]
   };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What technologies do you use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I specialize in React, Next.js, Node.js, Angular, Ruby On Rails, Python, AI Agents, LLMs and performance optimization."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you take freelance projects?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, I am open to freelance and collaboration opportunities."
+        }
+      }
+    ]
+  };
+
   return (
     <DarkMode>
       <Script
@@ -64,6 +88,12 @@ export default function RootLayout({
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Script
+        id="faq-ld-person"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <body className={`${work_sans.className} break-words selection:bg-primary selection:text-[white] dark:bg-darkprimary`}>
         <Navcontent/>
