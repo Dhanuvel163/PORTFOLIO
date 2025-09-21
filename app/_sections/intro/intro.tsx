@@ -8,6 +8,8 @@ import Link from 'next/link';
 import {Power3,gsap} from 'gsap';
 import ParticleBackground from '@/components/particles/ParticleBackground';
 import GeometricShapes from '@/components/geometric/GeometricShapes';
+import { SiMedium } from "react-icons/si";
+import { SiPeerlist } from "react-icons/si";
 
 function Intro(){
     let containerRef = useRef<HTMLDivElement | null>(null)
@@ -49,16 +51,28 @@ function Intro(){
                     </h2>
                     <div className='flex flex-wrap justify-center items-center mt-6 text-2xl gap-2 350:gap-3 dark:text-[white] relative z-10'>
                         <Link href="https://github.com/Dhanuvel163" target='_blank' aria-label='View github profile'>
-                            <Button className="backdrop-blur-sm bg-white/20 dark:bg-black/20 hover:bg-white/30 dark:hover:bg-black/30 transition-all duration-300 hover:scale-105" icon={<AiFillGithub/>} label='View github profile'/>
+                            <Button className="backdrop-blur-sm bg-white/20 dark:bg-black/20 hover:bg-white/30 dark:hover:bg-black/30 transition-all duration-300 hover:scale-105" 
+                                icon={<AiFillGithub/>} label='View github profile'/>
                         </Link>
                         <Link href="https://www.linkedin.com/in/dhanavel-ramachandran-721802193/" target='_blank' aria-label='View linkedin profile'>
-                            <Button className="backdrop-blur-sm bg-white/20 dark:bg-black/20 hover:bg-white/30 dark:hover:bg-black/30 transition-all duration-300 hover:scale-105" icon={<AiFillLinkedin/>} label='View linkedin profile'/>
+                            <Button className="backdrop-blur-sm bg-white/20 dark:bg-black/20 hover:bg-white/30 dark:hover:bg-black/30 transition-all duration-300 hover:scale-105" 
+                                icon={<AiFillLinkedin/>} label='View linkedin profile'/>
+                        </Link>
+                        <Link href="https://medium.com/@dhanuram99" target='_blank' aria-label='View medium blogs'>
+                            <Button className="backdrop-blur-sm bg-white/20 dark:bg-black/20 hover:bg-white/30 dark:hover:bg-black/30 transition-all duration-300 hover:scale-105" 
+                                icon={<SiMedium height={"18.75"} width={"18.75"}/>} label='View medium blogs'/>
+                        </Link>
+                        <Link href="https://peerlist.io/dhanuram99" target='_blank' aria-label='View peerlist page'>
+                            <Button className="backdrop-blur-sm bg-white/20 dark:bg-black/20 hover:bg-white/30 dark:hover:bg-black/30 transition-all duration-300 hover:scale-105" 
+                                icon={<SiPeerlist/>} label='View peerlist page'/>
                         </Link>
                         <Link href="https://www.instagram.com/dhanavel_____/?hl=en" target='_blank' aria-label='View instagram profile'>
-                            <Button className="backdrop-blur-sm bg-white/20 dark:bg-black/20 hover:bg-white/30 dark:hover:bg-black/30 transition-all duration-300 hover:scale-105" icon={<AiFillInstagram/>} label='View instagram profile'/>
+                            <Button className="backdrop-blur-sm bg-white/20 dark:bg-black/20 hover:bg-white/30 dark:hover:bg-black/30 transition-all duration-300 hover:scale-105" 
+                                icon={<AiFillInstagram/>} label='View instagram profile'/>
                         </Link>
                         <Link href="mailto:dhanuram99@gmail.com" target='_blank' aria-label='Send mail'>
-                            <Button className="backdrop-blur-sm bg-white/20 dark:bg-black/20 hover:bg-white/30 dark:hover:bg-black/30 transition-all duration-300 hover:scale-105" icon={<BiMailSend/>} label='Send mail'/>
+                            <Button className="backdrop-blur-sm bg-white/20 dark:bg-black/20 hover:bg-white/30 dark:hover:bg-black/30 transition-all duration-300 hover:scale-105" 
+                                icon={<BiMailSend/>} label='Send mail'/>
                         </Link>
                     </div>
                 </div>
