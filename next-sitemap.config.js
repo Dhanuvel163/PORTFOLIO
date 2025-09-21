@@ -5,6 +5,6 @@ module.exports = {
   sitemapSize: 5000,
   exclude: ['/secret-page'],
   additionalPaths: async (config) => [
-    await config.transform(config, '/custom-page'),
+    // await config.transform(config, '/custom-page'),
   ],
 };
