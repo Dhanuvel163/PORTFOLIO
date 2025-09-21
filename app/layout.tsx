@@ -10,7 +10,10 @@ const work_sans = Work_Sans({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: "Dhanavel | Full Stack Developer",
   description: "Good day! I'm Dhanavel, a Full Stack Developer who is passionate, creative, and driven to produce outstanding digital experiences. I have developed my knowledge of front-end and back-end technologies via my experience in the field of web development, enabling me to create seamless, user-friendly, and cutting-edge apps.",
-  keywords: "portfolio, full stack developer, software development engineer, javascript, reactjs, nodejs, angular, nextjs, react native"
+  keywords: "portfolio, full stack developer, software development engineer, javascript, reactjs, nodejs, angular, nextjs, react native",
+  verification: {
+    google: "Fe573o-6CZB5cE_hgGMcTZBft2Cfo0NAf9PQkR_PPVM",
+  },
 }
 
 export default function RootLayout({  
