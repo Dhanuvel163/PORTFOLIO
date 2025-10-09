@@ -20,7 +20,7 @@ export const language = [
     {
         title: 'Ruby',
         icon: SiRuby,
-        class: 'text-red'
+        class: 'text-[#d30001]'
     },
     {
         title: 'Python',
