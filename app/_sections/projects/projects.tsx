@@ -41,46 +41,46 @@ function Projects({ showAll = false }: { showAll?: boolean }){
                     !showAll &&
                     <h2 className="relative z-10 text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold text-center text-[black] dark:text-[white]">Projects</h2>
                 }
-                <div className="relative z-10 mt-6">
+                <div className="relative z-10 mt-6 grid grid-cols-1 1000:grid-cols-2 1400:grid-cols-3 gap-6">
                     {
                         displayProjects.map((project)=>(
-                            <div className="flex justify-center" key={project.title}>
-                                <div className="block 750:flex hover:scale-[1.01] bg-[white]/80 backdrop-blur-sm rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] mt-3 shadow-lg relative overflow-hidden max-w-none 1100:max-w-[80%] dark:bg-darksecondary/80 dark:text-[white] dark:ring-[rgb(255,255,255)]/[0.3] transition-all duration-300">
-                                    <div className="relative w-full 750:w-80 ring-1 ring-[rgb(51,65,85)]/[0.1] dark:ring-[rgb(255,255,255)]/[0.3] 750:hidden">
-                                        <Image src={project.image} height={project.height} width={project.weight} layout='responsive' objectFit='contain' alt="project image"/>
+                            <div className="flex flex-col hover:scale-[1.02] bg-[white]/80 backdrop-blur-sm rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] shadow-lg overflow-hidden dark:bg-darksecondary/80 dark:text-[white] dark:ring-[rgb(255,255,255)]/[0.3] transition-all duration-300" key={project.title}>
+                                <div className="relative w-full h-48 ring-1 ring-[rgb(51,65,85)]/[0.1] dark:ring-[rgb(255,255,255)]/[0.3]">
+                                    <Image src={project.image} layout='fill' objectFit='cover' alt="project image"/>
+                                </div>
+                                <div className="px-5 py-5 flex flex-col flex-1">
+                                    <div className="flex-1">
+                                        <h3 className="text-xl font-bold">{project.title}</h3>
+                                        <p className="text-xs 500:text-sm mt-3 line-clamp-3">{project.description}</p>
+                                        {
+                                            (project.skills.length > 0) &&
+                                            <>
+                                                <h2 className="text-sm font-bold mt-3">Skills</h2>
+                                                <div className="flex flex-wrap gap-2 mt-1">
+                                                    {
+                                                        project.skills.slice(0, 4).map((skill)=>(
+                                                            <div className="rounded-2xl bg-primary/10 backdrop-blur-sm ring-1 ring-primary/20 px-2 py-1 text-xs transition-all duration-300 hover:bg-primary/20" key={`${skill} ${project.title}`}>
+                                                                {skill}
+                                                            </div>
+                                                        ))
+                                                    }
+                                                    {project.skills.length > 4 && (
+                                                        <div className="rounded-2xl bg-primary/10 backdrop-blur-sm ring-1 ring-primary/20 px-2 py-1 text-xs">
+                                                            +{project.skills.length - 4}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </>
+                                        }
                                     </div>
-                                    <div className="relative w-full 750:w-80 ring-1 ring-[rgb(51,65,85)]/[0.1] dark:ring-[rgb(255,255,255)]/[0.3] hidden 750:block">
-                                        <Image src={project.image} layout='fill' objectFit='contain' alt="project image"/>
-                                    </div>
-                                    <div className="px-5 500:px-10 py-5 750:flex-[0%] grid">
-                                        <div>
-                                            <h3 className="text-xl 500:text-3xl font-bold">{project.title}</h3>
-                                            <p className="text-xs 500:text-sm mt-3">{project.description}</p>
-                                            {
-                                                (project.skills.length > 0) &&
-                                                <>
-                                                    <h2 className="text-1xl font-bold mt-3">Skills</h2>
-                                                    <div className="flex flex-wrap gap-3 mt-1">
-                                                        {
-                                                            project.skills.map((skill)=>(
-                                                                <div className="rounded-2xl bg-primary/10 backdrop-blur-sm ring-1 ring-primary/20 px-2 py-1 text-xs 500:text-sm transition-all duration-300 hover:bg-primary/20" key={`${skill} ${project.title}`}>
-                                                                    {skill}
-                                                                </div>
-                                                            ))
-                                                        }
-                                                    </div>
-                                                </>
-                                            }
-                                        </div>
-                                        <div className="mt-auto pt-5">
-                                            {
-                                                project.actions.map((action)=>(
-                                                    <Link href={action.link} target="_blank" key={action.label}>
-                                                        <Button className="bg-primary/10 hover:bg-primary/20 backdrop-blur-sm transition-all duration-300 hover:scale-105" label={action.label} icon={<FaEye/>} title={action.action}/>
-                                                    </Link>
-                                                ))
-                                            }
-                                        </div>
+                                    <div className="mt-4">
+                                        {
+                                            project.actions.map((action)=>(
+                                                <Link href={action.link} target="_blank" key={action.label}>
+                                                    <Button className="bg-primary/10 hover:bg-primary/20 backdrop-blur-sm transition-all duration-300 hover:scale-105 w-full" label={action.label} icon={<FaEye/>} title={action.action}/>
+                                                </Link>
+                                            ))
+                                        }
                                     </div>
                                 </div>
                             </div>
