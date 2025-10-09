@@ -1,12 +1,12 @@
 import {LiaReact} from 'react-icons/lia';
 import {
     BiLogoJavascript,BiLogoNodejs,BiLogoAngular,BiLogoVuejs,BiLogoTypescript,
-    BiLogoMongodb, BiLogoPostgresql,BiLogoFirebase,BiLogoAws
+    BiLogoMongodb, BiLogoPostgresql,BiLogoFirebase,BiLogoAws,
 } from 'react-icons/bi';
-import {SiNextdotjs,SiMysql,SiRubyonrails,SiLangchain,SiGooglegemini} from 'react-icons/si';
+import {SiNextdotjs,SiMysql,SiRubyonrails,SiLangchain,SiGooglegemini,SiRuby} from 'react-icons/si';
 import { DiPython, DiDocker, DiGoogleCloudPlatform } from "react-icons/di";
 
-export const frontend = [
+export const language = [
     // {
     //     title: 'Html',
     //     icon: AiFillHtml5,
@@ -18,6 +18,16 @@ export const frontend = [
         class: 'text-[#f0dc4e]'
     },
     {
+        title: 'Ruby',
+        icon: SiRuby,
+        class: 'text-red'
+    },
+    {
+        title: 'Python',
+        icon: DiPython,
+        class: 'text-[#366d9c]'
+    },
+    {
         title: 'Typescript',
         icon: BiLogoTypescript,
         class: 'text-[#2f74c0]'
@@ -27,6 +37,9 @@ export const frontend = [
     //     icon: BiLogoCss3,
     //     class: 'text-[#167dbe]'
     // },
+]
+
+export const frontend = [
     {
         title: 'React Js',
         icon: LiaReact,
@@ -60,11 +73,6 @@ export const backend = [
         icon: SiRubyonrails,
         class: 'text-[#d30001]'
     },
-    {
-        title: 'Python',
-        icon: DiPython,
-        class: 'text-[#366d9c]'
-    }
 ]
 
 export const database = [

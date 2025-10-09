@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useRef } from 'react';
 import Skillscard from '@/components/skillscard/Skillscard';
-import {frontend,backend,tools,ai,database} from './data';
+import {frontend,backend,tools,ai,database,language} from './data';
 // import {gsap} from 'gsap';
 // import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
 import {RiLightbulbFlashFill} from 'react-icons/ri';
@@ -47,118 +47,36 @@ function About(){
                 colors={['#9004ef', '#f9f9f940', '#00000020']}
                 scrollMultiplier={0.6}/>
 
-            <div ref={containerRef} className='w-full max-w-[90rem]'>
+            <div ref={containerRef} className='w-full max-w-[75rem]'>
                 <h2 className="relative z-10 text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold text-center text-[black] dark:text-[white] mb-12">Skills & Expertise</h2>
-
-                {/* Desktop Layout (1024px+) */}
-                <div className='relative z-10 hidden 1024:grid grid-cols-3 gap-8 mt-8'>
-                    {/* Left Column - Frontend & Backend */}
-                    <div className='space-y-4' ref={skillsRef}>
-                        <Skillscard title='Frontend' skills={frontend}/>
-                        <Skillscard title='Backend' skills={backend}/>
-                    </div>
-
-                    {/* Middle Column - Feature Cards */}
-                    <div className='flex flex-col justify-center gap-6' ref={iconsRef}>
-                        <Iconcard
-                            title='Intuitive'
-                            description='Effortlessly navigable, instinctively user-friendly UX/UI.'
-                            icon={<RiLightbulbFlashFill className="text-[2.75rem]"/>}
-                        />
-                        <Iconcard
-                            title='Scale'
-                            description='Easily scalable and high performant products.'
-                            icon={<SiFastapi className="text-[2rem]"/>}
-                        />
-                        <Iconcard
-                            title='Adaptable'
-                            description='Adapt to any screen size/device, from the grandest to the tiniest.'
-                            icon={<BiSolidMobileVibration className="text-[2rem]"/>}
-                        />
-                        <Iconcard
-                            title='Futuristic'
-                            description='Designing with tomorrow technology in mind, ready to evolve with innovation.'
-                            icon={<GrTechnology className="text-[2rem]"/>}
-                        />
-                    </div>
-
-                    {/* Right Column - Database, AI & Tools */}
-                    <div className='space-y-4'>
-                        <Skillscard title='Database' skills={database}/>
-                        <Skillscard title='AI' skills={ai}/>
-                        <Skillscard title='Tools' skills={tools}/>
-                    </div>
-                </div>
-
-                {/* Tablet Layout (600px - 1023px) */}
-                <div className='relative z-10 hidden 600:grid 1024:hidden grid-cols-2 gap-6 mt-8'>
-                    {/* Left Column */}
-                    <div className='space-y-4'>
-                        <Skillscard title='Frontend' skills={frontend}/>
-                        <Skillscard title='Backend' skills={backend}/>
-                        <Skillscard title='Database' skills={database}/>
-                    </div>
-
-                    {/* Right Column */}
-                    <div className='space-y-4'>
-                        <Skillscard title='AI' skills={ai}/>
-                        <Skillscard title='Tools' skills={tools}/>
-                        <div className='flex flex-col gap-4 mt-6'>
-                            <Iconcard
-                                title='Intuitive'
-                                description='Effortlessly navigable, instinctively user-friendly UX/UI.'
-                                icon={<RiLightbulbFlashFill className="text-[2.75rem]"/>}
-                            />
-                            <Iconcard
-                                title='Scale'
-                                description='Easily scalable and high performant products.'
-                                icon={<SiFastapi className="text-[2rem]"/>}
-                            />
-                            <Iconcard
-                                title='Adaptable'
-                                description='Adapt to any screen size/device, from the grandest to the tiniest.'
-                                icon={<BiSolidMobileVibration className="text-[2rem]"/>}
-                            />
-                            <Iconcard
-                                title='Futuristic'
-                                description='Designing with tomorrow technology in mind, ready to evolve with innovation.'
-                                icon={<GrTechnology className="text-[2rem]"/>}
-                            />
-                        </div>
-                    </div>
-                </div>
-
-                {/* Mobile Layout (<600px) */}
-                <div className='relative z-10 block 600:hidden mt-6'>
-                    <div className='space-y-4'>
-                        <Skillscard title='Frontend' skills={frontend}/>
-                        <Skillscard title='Backend' skills={backend}/>
-                        <Skillscard title='Database' skills={database}/>
-                        <Skillscard title='AI' skills={ai}/>
-                        <Skillscard title='Tools' skills={tools}/>
-                    </div>
-                    <div className='flex flex-col max-w-[15.25rem] text-center m-auto mt-10 gap-4'>
-                        <Iconcard
-                            title='Intuitive'
-                            description='Effortlessly navigable, instinctively user-friendly UX/UI.'
-                            icon={<RiLightbulbFlashFill className="text-[2.75rem]"/>}
-                        />
-                        <Iconcard
-                            title='Scale'
-                            description='Easily scalable and high performant products.'
-                            icon={<SiFastapi className="text-[2rem]"/>}
-                        />
-                        <Iconcard
-                            title='Adaptable'
-                            description='Adapt to any screen size/device, from the grandest to the tiniest.'
-                            icon={<BiSolidMobileVibration className="text-[2rem]"/>}
-                        />
-                        <Iconcard
-                            title='Futuristic'
-                            description='Designing with tomorrow technology in mind, ready to evolve with innovation.'
-                            icon={<GrTechnology className="text-[2rem]"/>}
-                        />
-                    </div>
+                <div className='relative z-10 grid grid-cols-1 min-[600px]:grid-cols-2 min-[1024px]:grid-cols-3 gap-6 mt-8'>
+                    <Skillscard title='Language' skills={language}/>
+                    <Skillscard title='Frontend' skills={frontend}/>
+                    <Skillscard title='Backend' skills={backend}/>
+                    <Skillscard title='Database' skills={database}/>
+                    <Skillscard title='AI' skills={ai}/>
+                    <Skillscard title='Tools' skills={tools}/>
+                    <Iconcard
+                        title='Intuitive'
+                        description='Effortlessly navigable, instinctively user-friendly UX/UI.'
+                        icon={<RiLightbulbFlashFill className="text-[2rem]"/>}
+                    />
+                    <Iconcard
+                        title='Scale'
+                        description='Easily scalable and high performant products.'
+                        icon={<SiFastapi className="text-[2rem]"/>}
+                    />
+                    <Iconcard
+                        title='Adaptable'
+                        description='Adapt to any screen size/device, from the grandest to the tiniest.'
+                        icon={<BiSolidMobileVibration className="text-[2rem]"/>}
+                    />
+                    <Iconcard
+                        className='block min-[1024px]:hidden'
+                        title='Futuristic'
+                        description='Designing with tomorrow technology in mind, ready to evolve with innovation.'
+                        icon={<GrTechnology className="text-[2rem]"/>}
+                    />
                 </div>
             </div>
         </section>
