@@ -37,9 +37,9 @@ function Header({ isOpen, onClose = ()=>{}, onOpen = ()=>{} }: HeaderProps){
                 <div className='ml-4'>
                     {
                         theme?.theme
-                        ? <Button className="dark:hover:!bg-darkprimary/30 font-bold min-[600px]:py-3 px-0 flex justify-center items-center w-8 h-8 min-[600px]:w-10 min-[600px]:h-10 !rounded-full"
+                        ? <Button className="dark:hover:!bg-darkprimary/30 font-bold min-[600px]:py-3 !px-0 flex justify-center items-center w-8 h-8 min-[600px]:w-10 min-[600px]:h-10 !rounded-full"
                             icon={<MdLightMode/>} label='Dark' onClick={()=>theme.toggleTheme()}/>
-                        : <Button className="dark:hover:!bg-darkprimary/30 font-bold min-[600px]:py-3 px-0 flex justify-center items-center w-8 h-8 min-[600px]:w-10 min-[600px]:h-10 !rounded-full"
+                        : <Button className="dark:hover:!bg-darkprimary/30 font-bold min-[600px]:py-3 !px-0 flex justify-center items-center w-8 h-8 min-[600px]:w-10 min-[600px]:h-10 !rounded-full"
                         icon={<MdOutlineNightlight className='-rotate-[30deg]'/>} label='Light' onClick={()=>theme?.toggleTheme()}/>
                     }
                 </div>
@@ -49,14 +49,14 @@ function Header({ isOpen, onClose = ()=>{}, onOpen = ()=>{} }: HeaderProps){
                 <div className='m-auto ml-2 280:ml-4'>
                     {
                         theme?.theme
-                        ? <Button className="dark:hover:!bg-darkprimary/30 font-bold min-[600px]:py-3 px-0 flex justify-center items-center w-8 h-8 min-[600px]:w-10 min-[600px]:h-10 !rounded-full"
+                        ? <Button className="dark:hover:!bg-darkprimary/30 font-bold min-[600px]:py-3 !px-0 flex justify-center items-center w-8 h-8 min-[600px]:w-10 min-[600px]:h-10 !rounded-full"
                             icon={<MdLightMode/>} label='Dark' onClick={()=>theme.toggleTheme()}/>
-                        : <Button className="dark:hover:!bg-darkprimary/30 font-bold min-[600px]:py-3 px-0 flex justify-center items-center w-8 h-8 min-[600px]:w-10 min-[600px]:h-10 !rounded-full"
+                        : <Button className="dark:hover:!bg-darkprimary/30 font-bold min-[600px]:py-3 !px-0 flex justify-center items-center w-8 h-8 min-[600px]:w-10 min-[600px]:h-10 !rounded-full"
                         icon={<MdOutlineNightlight className='-rotate-[30deg]'/>} label='Light' onClick={()=>theme?.toggleTheme()}/>
                     }
                 </div>
                 <div className='m-auto ml-2 280:ml-4'>
-                    <Button className="dark:hover:!bg-darkprimary/30 font-bold min-[600px]:py-3 px-0 flex justify-center items-center w-8 h-8 min-[600px]:w-10 min-[600px]:h-10 !rounded-full"
+                    <Button className="dark:hover:!bg-darkprimary/30 font-bold min-[600px]:py-3 !px-0 flex justify-center items-center w-8 h-8 min-[600px]:w-10 min-[600px]:h-10 !rounded-full"
                         icon={<GiHamburgerMenu/>} label='Dark' onClick={isOpen ? onClose : onOpen}/>
                 </div>
             </div>
