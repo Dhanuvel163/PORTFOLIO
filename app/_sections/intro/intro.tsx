@@ -40,8 +40,8 @@ function Intro(){
             {/* Geometric shapes */}
             <GeometricShapes />
             {/* Main content */}
-            <div className="max-w-[90%] 750:max-w-[50%]">
-                <div className='flex justify-center items-center mb-8'>
+            <div className="max-w-[90%] 750:max-w-[50%] mt-12">
+                <div className='flex justify-center items-center mb-6 min-[600px]:mb-8'>
                     <div className='relative w-32 h-32 350:w-40 350:h-40 600:w-48 600:h-48 rounded-full overflow-hidden border-4 border-white/30 dark:border-white/20 shadow-2xl backdrop-blur-sm z-10 hover:scale-105 transition-transform duration-300'>
                         <Image
                             src="/images/dhanavel.jpg"
@@ -74,11 +74,11 @@ function Intro(){
                             <Button className="backdrop-blur-sm bg-white/20 dark:bg-black/20 hover:bg-white/30 dark:hover:bg-black/30 transition-all duration-300 hover:scale-105" 
                                 icon={<SiMedium height={"18.75"} width={"18.75"}/>} label='View medium blogs'/>
                         </Link>
-                        <Link href="https://peerlist.io/dhanuram99" target='_blank' aria-label='View peerlist page'>
+                        <Link className='hidden min-[365px]:block' href="https://peerlist.io/dhanuram99" target='_blank' aria-label='View peerlist page'>
                             <Button className="backdrop-blur-sm bg-white/20 dark:bg-black/20 hover:bg-white/30 dark:hover:bg-black/30 transition-all duration-300 hover:scale-105" 
                                 icon={<SiPeerlist/>} label='View peerlist page'/>
                         </Link>
-                        <Link href="https://www.instagram.com/dhanavel_____/?hl=en" target='_blank' aria-label='View instagram profile'>
+                        <Link className='hidden min-[600px]:block' href="https://www.instagram.com/dhanavel_____/?hl=en" target='_blank' aria-label='View instagram profile'>
                             <Button className="backdrop-blur-sm bg-white/20 dark:bg-black/20 hover:bg-white/30 dark:hover:bg-black/30 transition-all duration-300 hover:scale-105" 
                                 icon={<AiFillInstagram/>} label='View instagram profile'/>
                         </Link>
