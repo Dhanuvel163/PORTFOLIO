@@ -1,7 +1,9 @@
+import { ReactNode } from "react";
+
 function Iconcard({
     title, description, icon, className=""
 }:{
-    title:string, description:string, icon:JSX.Element, className?:string
+    title:string, description:string, icon:ReactNode, className?:string
 
 }){
     return(

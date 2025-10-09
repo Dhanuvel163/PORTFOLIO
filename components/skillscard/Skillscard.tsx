@@ -16,21 +16,24 @@ function Skillscard({
             </h3>
             <div className="flex flex-wrap justify-center gap-3 p-4 py-6 relative">
                 {
-                    skills.map((skill, index)=>(
-                        <div
-                            className={`text-4xl ${skill.class} group relative flex flex-col items-center transition-all duration-300 hover:scale-125 cursor-pointer hover:drop-shadow-lg`}
-                            key={skill.title}
-                            style={{ animationDelay: `${index * 50}ms` }}
-                        >
-                            <div className="relative p-2 rounded-lg transition-all duration-300 group-hover:bg-white/50 dark:group-hover:bg-white/10">
-                                {skill.title == "Ruby" ? <div className="p-1"><skill.icon className="h-7 w-8"/></div> : <skill.icon/>}
+                    skills.map((skill, index)=>{
+                        const Icon = skill.icon;
+                        return (
+                            <div
+                                className={`text-4xl ${skill.class} group relative flex flex-col items-center transition-all duration-300 hover:scale-125 cursor-pointer hover:drop-shadow-lg`}
+                                key={skill.title}
+                                style={{ animationDelay: `${index * 50}ms` }}
+                            >
+                                <div className="relative p-2 rounded-lg transition-all duration-300 group-hover:bg-white/50 dark:group-hover:bg-white/10">
+                                    {skill.title === "Ruby" ? <div className="p-1"><Icon className="h-7 w-8"/></div> : <Icon/>}
+                                </div>
+                                <div className="absolute top-8 mt-8 hidden flex-col items-center group-hover:flex z-20 animate-in fade-in duration-200">
+                                    <div className="-mb-2 h-3 w-3 rotate-45 bg-[black] dark:bg-[white]"></div>
+                                    <span className="whitespace-nowrap relative z-10 bg-[black] dark:bg-[white] dark:text-[black] px-3 py-2 text-xs font-medium leading-none text-[white] shadow-xl rounded-md min-w-max backdrop-blur-sm">{skill.title}</span>
+                                </div>
                             </div>
-                            <div className="absolute top-8 mt-8 hidden flex-col items-center group-hover:flex z-20 animate-in fade-in duration-200">
-                                <div className="-mb-2 h-3 w-3 rotate-45 bg-[black] dark:bg-[white]"></div>
-                                <span className="whitespace-nowrap relative z-10 bg-[black] dark:bg-[white] dark:text-[black] px-3 py-2 text-xs font-medium leading-none text-[white] shadow-xl rounded-md min-w-max backdrop-blur-sm">{skill.title}</span>
-                            </div>
-                        </div>
-                    ))
+                        );
+                    })
                 }
             </div>
         </div>

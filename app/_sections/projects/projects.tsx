@@ -42,7 +42,7 @@ function Projects({ showAll = false }: { showAll?: boolean }){
                         !showAll &&
                         <h2 className="relative z-10 text-lg 300:text-2xl 350:text-3xl 750:text-4xl 1000:text-[2.5rem] font-bold text-center text-[black] dark:text-[white] mb-12">Projects</h2>
                     }
-                    <div className="relative z-10 mt-6 grid grid-cols-1 min-[600px]:grid-cols-2 min-[1024px]:grid-cols-3 gap-6">
+                    <div className="relative z-10 mt-6 grid grid-cols-1 min-[780px]:grid-cols-2 min-[1100px]:grid-cols-3 gap-6">
                         {
                             displayProjects.map((project)=>(
                                 <div className="flex flex-col hover:scale-[1.02] bg-[white]/80 backdrop-blur-sm rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] shadow-lg overflow-hidden dark:bg-darksecondary/80 dark:text-[white] dark:ring-[rgb(255,255,255)]/[0.3] transition-all duration-300" key={project.title}>

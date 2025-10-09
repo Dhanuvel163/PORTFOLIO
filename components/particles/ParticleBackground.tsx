@@ -26,7 +26,7 @@ function ParticleBackground({
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | null>(null);
   const scrollY = useRef<number>(0);
 
   const handleScroll = useCallback(() => {
@@ -141,7 +141,7 @@ function ParticleBackground({
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', resizeCanvas);
     };
-  }, [particleCount, colors, scrollMultiplier]);
+  }, [particleCount, colors, scrollMultiplier, handleScroll]);
 
   return (
     <canvas
