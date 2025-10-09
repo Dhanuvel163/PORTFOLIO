@@ -13,7 +13,7 @@
     },
     {
         "title" : "Chad Trader",
-        "description": "Crafted a high-conversion landing page for “Chad Trader,” featuring mentorship-driven trading programs and compelling calls-to-action to drive user sign-ups.",
+        "description": "Crafted a high-conversion landing page for “Chad Trader”, featuring mentorship-driven trading programs and compelling calls-to-action to drive user sign-ups.",
         "skills": ["NextJs"],
         "actions" : [{
             "action":"View", "link":"https://chad-trader.vercel.app/", "label": "View 6Enigma"
@@ -105,7 +105,7 @@
         "image": "/images/projects/extramileplay.png",
         "height": 1366,
         "weight": 2290,
-        "starred": false
+        "starred": true
     },
     {
         "title" : "Kalanju",

@@ -46,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <DarkMode>
+    <html lang="en" className='scroll-smooth' suppressHydrationWarning>
       <Script
         id="json-ld-person"
         type="application/ld+json"
@@ -80,12 +80,14 @@ export default function RootLayout({
         ))
       }
       <body className={`${work_sans.className} break-words selection:bg-primary selection:text-[white] dark:bg-darkprimary`}>
-        <Navcontent/>
-        <main>
-          {children}
-        </main>
-        <Footer/>
+        <DarkMode>
+          <Navcontent/>
+          <main>
+            {children}
+          </main>
+          <Footer/>
+        </DarkMode>
       </body>
-    </DarkMode>
+    </html>
   )
 }
