@@ -13,7 +13,7 @@
     },
     {
         "title" : "Chad Trader",
-        "description": "Crafted a high-conversion landing page for “Chad Trader”, featuring mentorship-driven trading programs and compelling calls-to-action to drive user sign-ups.",
+        "description": "Crafted a high-conversion landing page for “Chad Trader,” highlighting mentorship-driven trading programs with persuasive CTAs and seamless user flow. Integrated secure payment and course subscription functionalities with dynamic discount options to enhance engagement, drive conversions, and boost overall user sign-ups effectively.",
         "skills": ["NextJs"],
         "actions" : [{
             "action":"View", "link":"https://chad-trader.vercel.app/", "label": "View 6Enigma"
@@ -37,7 +37,7 @@
     },
     {
         "title" : "6Enigma",
-        "description": "Comprehensive data analytics portal facilitating both client and admin access, enabling real-time monitoring of video editing workflows, performance metrics, and user engagement insights.",
+        "description": "A comprehensive data analytics portal providing both client and admin access, enabling real-time monitoring of video editing workflows, performance metrics, and user engagement insights. The platform streamlined data visualization and reporting, empowering teams to track progress, assess efficiency, and make informed, data-driven decisions seamlessly.",
         "skills": ["React", "Flask", "MongoDB"],
         "actions" : [{
             "action":"View", "link":"https://client.6enigma.in/", "label": "View 6Enigma"
@@ -73,7 +73,7 @@
     },
     {
         "title" : "Get Hikma",
-        "description": "An on-demand education platform that enables students to access personalized one-on-one, group, and instant mentoring sessions across any subject—delivered at their convenience.",
+        "description": "An on-demand education platform enabling students to access personalized one-on-one, group, and instant mentoring sessions across various subjects. Designed for flexibility and convenience, the platform connects learners with expert mentors in real time, fostering interactive learning and personalized academic support anytime, anywhere.",
         "skills": ["React Native", "Node JS"],
         "actions" : [{
             "action":"View", "link":"https://apps.apple.com/us/app/get-hikma/id1614930767", "label": "View Hikma"
@@ -85,7 +85,7 @@
     },
     {
         "title" : "The Body App",
-        "description": "A mobile fitness companion for bodybuilding enthusiasts, offering features such as training plans, nutrition tracking, progress logging, and one-on-one trainer interaction via video sharing and messaging.",
+        "description": "Developed a mobile fitness companion app for bodybuilding enthusiasts, featuring personalized training plans, nutrition tracking, and progress logging. Enabled one-on-one trainer interaction through video sharing and in-app messaging to enhance guidance, motivation, and user engagement throughout the fitness journey.",
         "skills": ["React Native", "Node JS"],
         "actions" : [{
             "action":"View", "link":"https://apps.apple.com/us/app/get-hikma/id1614930767", "label": "View Body App"
@@ -133,7 +133,7 @@
     },
     {
         "title" : "Gulf Research Meeting",
-        "description": "App to promote academic exchange and provide factual insights on Gulf studies in an accessible, event-centric interface.",
+        "description": "An app designed to promote academic exchange and provide factual insights on Gulf studies through an accessible, event-centric interface. The platform highlights research, discussions, and regional developments, fostering collaboration and knowledge sharing among scholars, students, and institutions focused on Gulf affairs.",
         "skills": ["Ionic", "Cordova", "Capacitor"],
         "actions" : [{
             "action":"View", "link":"https://play.google.com/store/apps/details?id=io.framework7.grms&hl=en_IN", "label": "View GRM"
@@ -145,7 +145,7 @@
     },
     {
         "title" : "Sphelical",
-        "description": "Landing page of a company dedicated to creating various AI-powered assistants, including desktop agents and browser agents, that are designed to transform everyday technological experiences",
+        "description": "Designed and developed the landing page for a company focused on building innovative AI-powered assistants, including desktop and browser-based agents, aimed at transforming everyday technological experiences. The page highlights product capabilities, use cases, and benefits through an engaging, modern, and conversion-focused design.",
         "skills": ["Astro"],
         "actions" : [{
             "action":"View", "link":"https://www.sphelical.com/", "label": "View Sphelical"
@@ -157,7 +157,7 @@
     },
     {
         "title" : "Incubr",
-        "description": "Landing page of a company based in Gurugram (Gurgaon), Haryana. It was incorporated on September 28, 2015, and remains active as of 2025.",
+        "description": "Designed and developed the landing page for a Gurugram-based company incorporated and actively operating as of 2025. The page effectively presents the company’s vision, services, and achievements through a clean, responsive layout optimized for engagement and credibility.",
         "skills": ["React"],
         "actions" : [{
             "action":"View", "link":"https://incubr.com/", "label": "View Incubr"
