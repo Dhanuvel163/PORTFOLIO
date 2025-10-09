@@ -10,6 +10,7 @@ import ParticleBackground from '@/components/particles/ParticleBackground';
 import GeometricShapes from '@/components/geometric/GeometricShapes';
 import { SiMedium } from "react-icons/si";
 import { SiPeerlist } from "react-icons/si";
+import Image from 'next/image';
 
 function Intro(){
     let containerRef = useRef<HTMLDivElement | null>(null)
@@ -40,6 +41,17 @@ function Intro(){
             <GeometricShapes />
             {/* Main content */}
             <div className="max-w-[90%] 750:max-w-[50%]">
+                <div className='flex justify-center items-center mb-8'>
+                    <div className='relative w-32 h-32 350:w-40 350:h-40 600:w-48 600:h-48 rounded-full overflow-hidden border-4 border-white/30 dark:border-white/20 shadow-2xl backdrop-blur-sm z-10 hover:scale-105 transition-transform duration-300'>
+                        <Image
+                            src="/images/dhanavel.jpg"
+                            alt="Dhanavel R"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
+                    </div>
+                </div>
                 <div className='flex justify-center items-center'>
                     <h1 className={`${classes.hi} dark:text-[white] relative z-10`}>
                         Hello, I&apos;m Dhanavel R
