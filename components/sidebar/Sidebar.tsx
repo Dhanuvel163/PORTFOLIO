@@ -16,7 +16,7 @@ function Sidebar({ isOpen, onClose = ()=>{} }: SidebarProps) {
   const navigationItems = [
     { name: 'Home', icon: <FaHome />, href: '/', scrollTo: null },
     // { name: 'Skills', icon: <FaUser />, href: '/', scrollTo: 'skills' },
-    { name: 'Projects', icon: <FaProjectDiagram />, href: '/projects', scrollTo: null },
+    { name: 'All Projects', icon: <FaProjectDiagram />, href: '/projects', scrollTo: null },
   ];
 
   const socialLinks = [

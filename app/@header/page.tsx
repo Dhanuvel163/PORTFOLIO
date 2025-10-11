@@ -32,7 +32,7 @@ function Header({ isOpen, onClose = ()=>{}, onOpen = ()=>{} }: HeaderProps){
                 </Link>
                 <Link href="/projects" className='flex items-center gap-2 hover:text-primary transition-colors'>
                     <FaProjectDiagram className='text-lg'/>
-                    <span className='font-medium'>Projects</span>
+                    <span className='font-medium'>All Projects</span>
                 </Link>
                 <div className='ml-4'>
                     {
