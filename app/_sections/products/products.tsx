@@ -44,45 +44,47 @@ function Products({ showAll = false }: { showAll?: boolean }){
                 <div className="relative z-10 mt-6 grid grid-cols-1 min-[780px]:grid-cols-2 min-[1100px]:grid-cols-3 gap-6 max-w-[75rem] m-auto">
                     {
                         displayProjects.map((project)=>(
-                            <div className="flex flex-col hover:scale-[1.02] bg-[white]/80 backdrop-blur-sm rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] shadow-lg overflow-hidden dark:bg-darksecondary/80 dark:text-[white] dark:ring-[rgb(255,255,255)]/[0.3] transition-all duration-300" key={project.title}>
+                            <div className="grid grid-rows-[auto_auto_1fr_auto_auto] hover:scale-[1.02] bg-[white]/80 backdrop-blur-sm rounded-xl ring-1 ring-[rgb(51,65,85)]/[0.1] shadow-lg overflow-hidden dark:bg-darksecondary/80 dark:text-[white] dark:ring-[rgb(255,255,255)]/[0.3] transition-all duration-300" key={project.title}>
                                 <div className="relative w-full h-48 ring-1 ring-[rgb(51,65,85)]/[0.1] dark:ring-[rgb(255,255,255)]/[0.3]">
                                     <Image src={project.image} layout='fill' objectFit='cover' alt="project image"/>
                                 </div>
-                                <div className="px-5 py-5 flex flex-col flex-1">
-                                    <div className="flex-1">
-                                        <h3 className="text-xl font-bold">{project.title}</h3>
-                                        <p className="text-xs 500:text-sm mt-3">{project.description}</p>
-                                        {
-                                            (project.skills.length > 0) &&
-                                            <>
-                                                <h2 className="text-sm font-bold mt-3">Skills</h2>
-                                                <div className="flex flex-wrap gap-2 mt-1">
-                                                    {
-                                                        project.skills.slice(0, 4).map((skill)=>(
-                                                            <div className="rounded-2xl bg-primary/10 backdrop-blur-sm ring-1 ring-primary/20 px-2 py-1 text-xs transition-all duration-300 hover:bg-primary/20" key={`${skill} ${project.title}`}>
-                                                                {skill}
-                                                            </div>
-                                                        ))
-                                                    }
-                                                    {project.skills.length > 4 && (
-                                                        <div className="rounded-2xl bg-primary/10 backdrop-blur-sm ring-1 ring-primary/20 px-2 py-1 text-xs">
-                                                            +{project.skills.length - 4}
+                                <div className="px-5 pt-5">
+                                    <h3 className="text-xl font-bold">{project.title}</h3>
+                                </div>
+                                <div className="px-5">
+                                    <p className="text-xs 500:text-sm mt-3">{project.description}</p>
+                                </div>
+                                <div className="px-5">
+                                    {
+                                        (project.skills.length > 0) &&
+                                        <>
+                                            <h2 className="text-sm font-bold mt-3">Skills</h2>
+                                            <div className="flex flex-wrap gap-2 mt-1">
+                                                {
+                                                    project.skills.slice(0, 4).map((skill)=>(
+                                                        <div className="rounded-2xl bg-primary/10 backdrop-blur-sm ring-1 ring-primary/20 px-2 py-1 text-xs transition-all duration-300 hover:bg-primary/20" key={`${skill} ${project.title}`}>
+                                                            {skill}
                                                         </div>
-                                                    )}
-                                                </div>
-                                            </>
-                                        }
-                                    </div>
-                                    <div className="mt-4 flex gap-x-3">
-                                        {
-                                            project.actions.map((action)=>(
-                                                <Link href={action.link} target="_blank" key={action.label}>
-                                                    <Button className="bg-primary/10 hover:bg-primary/20 backdrop-blur-sm transition-all duration-300 hover:scale-105"
-                                                    label={action.label} icon={(action.action == "Github")?<FaGithub/>:<FaEye/>} title={action.action}/>
-                                                </Link>
-                                            ))
-                                        }
-                                    </div>
+                                                    ))
+                                                }
+                                                {project.skills.length > 4 && (
+                                                    <div className="rounded-2xl bg-primary/10 backdrop-blur-sm ring-1 ring-primary/20 px-2 py-1 text-xs">
+                                                        +{project.skills.length - 4}
+                                                    </div>
+                                                )}
+                                            </div>
+                                        </>
+                                    }
+                                </div>
+                                <div className="px-5 pb-5 mt-4 flex gap-x-3">
+                                    {
+                                        project.actions.map((action)=>(
+                                            <Link href={action.link} target="_blank" key={action.label}>
+                                                <Button className="bg-primary/10 hover:bg-primary/20 backdrop-blur-sm transition-all duration-300 hover:scale-105"
+                                                label={action.label} icon={(action.action == "Github")?<FaGithub/>:<FaEye/>} title={action.action}/>
+                                            </Link>
+                                        ))
+                                    }
                                 </div>
                             </div>
                         ))
