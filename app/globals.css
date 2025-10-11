@@ -40,3 +40,9 @@
 .dark ::-webkit-scrollbar-thumb:hover {
     @apply bg-[#555]
 }
+
+body{
+    transition-duration: 2s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
