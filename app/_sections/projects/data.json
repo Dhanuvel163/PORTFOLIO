@@ -24,6 +24,18 @@
         "starred": true
     },
     {
+        "title" : "Study France",
+        "description": "Crafted a high-conversion landing page for a dedicated consultancy platform offering end-to-end guidance for Indian students to pursue higher education in France, from course selection to admissions and visa support.",
+        "skills": ["NextJs"],
+        "actions" : [{
+            "action":"View", "link":"https://studyfrance.in/", "label": "View Study France"
+        }],
+        "image": "/images/projects/study_france.png",
+        "height": 1360,
+        "weight": 2284,
+        "starred": true
+    },
+    {
         "title" : "VLCC",
         "description": "A global leader in beauty, skincare, and wellness with 310 centers across 11 countries. Founded in 1989, it offers holistic services in weight management, skincare, and personal care products. Through its institutes, VLCC also trains 15,000+ students annually, contributing to skill development in the wellness industry.",
         "skills": ["NextJs"],
